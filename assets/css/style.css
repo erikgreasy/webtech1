@@ -36,7 +36,9 @@ section{
     }
   }
 
-  
+.gamecard a { 
+    color: inherit; 
+} 
 
 .gamecard{
     min-width: 200px;
