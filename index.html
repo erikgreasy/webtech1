@@ -3,16 +3,167 @@
 <head>
     <title>GEO TIMEEEE :)</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
  
+  
+<!--************************************************************************************
+    *    TODO treba urobit nejaky header, toto je nejaky random, nech zatial nieco je  *
+    ************************************************************************************-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark pt-2 pb-2">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          <!-- </a> -->
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
+  <!-- city image in section -->
+  <section></section>
+
+<!--****************************
+    *    Cards for each game   *
+    ****************************-->
+  <div class="container-fluid">
+    <div class="row mx-auto">
+
+      <!-- <a href="./_em/index.html"></a> -->
+        <div class="gamecard col-sm-12 col-md-6 col-lg-6 col-xl-3 ml-auto" id="emgame">
+          <div class="gamecard-bg">
+            <div class="gamepreview mx-auto">
+              <img class="preview-img" src="./assets/img/bratislava.jpg" alt="Fotka preview hry">
+              <h3 class="mt-3 mb-3">Spoznaj Bratislavu!</h2>
+              <span class="gamecard-description">Nejaky nahodny opisny textk tejto hre. Je to rozhodne velmi zaujimave a prospesne pre kazdeho z nas a nadalej.</span>
+            </div>
+            <span class="author-gamecard">autor: Erik Masný</span>
+          </div>
+        </div>
+      <!-- </a> -->
+
+      <!-- <a href="./_rb/index.html"></a> -->
+        <div class="gamecard col-sm-12 col-md-6 col-lg-6 col-xl-3 ml-auto" id="rbgame">
+          <div class="gamecard-bg">
+            <div class="gamepreview mx-auto">
+              <img class="preview-img" src="./assets/img/slovakia.jpg" alt="Fotka preview hry">
+              <h3 class="mt-3 mb-3">Spoznaj Slovensko!</h2>
+              <span class="gamecard-description">ity have suffered alteration in some form, by injected humour, sage of Lorem Ipsum, you need to be sure there isn't anything em</span>
+            </div>
+            <span class="author-gamecard">autor: Roman Bútora</span>
+          </div>
+        </div>
+      <!-- </a> -->
+
+      <!-- <a href="./_ml/index.html"></a> -->
+        <div class="gamecard col-sm-12 col-md-6 col-lg-6 col-xl-3 ml-auto" id="mlgame">
+          <div class="gamecard-bg">
+            <div class="gamepreview mx-auto">
+              <img class="preview-img" src="./assets/img/globe.jpg" alt="Fotka preview hry">
+              <h3 class="mt-3 mb-3">Spoznaj Svet!</h2>
+              <span class="gamecard-description"> in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of th</span>
+            </div>
+            <span class="author-gamecard">autor: Marek Lunter</span>
+         </div>
+        </div>
+      <!-- </a> -->
+
+      <!-- <a href="./_rk/index.html"></a> -->
+        <div class="gamecard col-sm-12 col-md-6 col-lg-6 col-xl-3 ml-auto" id="rkgame">
+          <div class="gamecard-bg">
+            <div class="gamepreview mx-auto">
+              <img class="preview-img" src="./assets/img/continents.svg" alt="Fotka preview hry">
+              <h3 class="mt-3 mb-3">Spoznaj Kontinenty!</h2>
+              <span class="gamecard-description">ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wh.</span>
+            </div>
+          <span class="author-gamecard">autor: Rastislav Kopál</span>
+        </div>
+       </div>
+      <!-- </a> -->
+      
+    </div>
+  </div>
+
+
+<!--**************************************************
+    *TODO treba dorobit footer, pridat co treba      *
+    ***************************************************-->
+    <footer class="bg-dark text-light text-center text-lg-start mt-5">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Footer text</h5>
+    
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+              molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+              aliquam voluptatem veniam, est atque cumque eum delectus sint!
+            </p>
+          </div>
+          <!--Grid column-->
+    
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Footer text</h5>
+    
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+              molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+              aliquam voluptatem veniam, est atque cumque eum delectus sint!
+            </p>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-dark"">www.blablatext.bla</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
