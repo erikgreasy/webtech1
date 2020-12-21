@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <title>GEO TIMEEEE :)</title>
+    <title>Geografia hrou</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -52,7 +52,11 @@
   </nav>
 
   <!-- city image in section -->
-  <section></section>
+  <section>
+    <div class="center">
+      <h1 class="center__text glitch is-glitching" data-text="SPOZNAJ!">SPOZNAJ</h1>
+    </div>
+  </section>
 
 <!--****************************
     *    Cards for each game   *
@@ -64,10 +68,10 @@
             <div class="gamepreview mx-auto">
               <a href="./_em/index.html">
               <img class="preview-img" src="./assets/img/bratislava.jpg" alt="Fotka preview hry">
-              <h3 class="mt-3 mb-3">Spoznaj Bratislavu!</h2></a>
+              <h3 class="mt-3 mb-3">Bratislavu!</h2></a>
               <span class="gamecard-description">Nejaky nahodny opisny textk tejto hre. Je to rozhodne velmi zaujimave a prospesne pre kazdeho z nas a nadalej.</span>
             </div>
-            <span class="author-gamecard">autor: Erik Masný</span>
+            <span class="author-gamecard">autor: E. Masný</span>
           </div>
         </div>
 
@@ -77,10 +81,10 @@
             <div class="gamepreview mx-auto">
               <a href="./_rb/index.html">
               <img class="preview-img" src="./assets/img/slovakia.jpg" alt="Fotka preview hry">
-              <h3 class="mt-3 mb-3">Spoznaj Slovensko!</h2></a>
+              <h3 class="mt-3 mb-3">Slovensko!</h2></a>
               <span class="gamecard-description">ity have suffered alteration in some form, by injected humour, sage of Lorem Ipsum, you need to be sure there isn't anything em</span>
             </div>
-            <span class="author-gamecard">autor: Roman Bútora</span>
+            <span class="author-gamecard">autor: R. Bútora</span>
           </div>
         </div>
 
@@ -90,10 +94,10 @@
             <div class="gamepreview mx-auto">
               <a href="./_ml/index.html">
               <img class="preview-img" src="./assets/img/globe.jpg" alt="Fotka preview hry">
-              <h3 class="mt-3 mb-3">Spoznaj Svet!</h2></a>
-              <span class="gamecard-description"> in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of th</span>
+              <h3 class="mt-3 mb-3">Svet!</h2></a>
+              <span class="gamecard-description"> in Virginia, looked up one of the more obscure Latin words, from a Lorem Ipsum passage, and going through the cites of th</span>
             </div>
-            <span class="author-gamecard">autor: Marek Lunter</span>
+            <span class="author-gamecard">autor: M. Lunter</span>
          </div>
         </div>
 
@@ -103,10 +107,10 @@
             <div class="gamepreview mx-auto">
               <a href="./_rk/index.html">
               <img class="preview-img" src="./assets/img/continents.svg" alt="Fotka preview hry">
-              <h3 class="mt-3 mb-3">Spoznaj Kontinenty!</h2></a>
+              <h3 class="mt-3 mb-3">Kontinenty!</h2></a>
               <span class="gamecard-description">ummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wh.</span>
             </div>
-          <span class="author-gamecard">autor: Rastislav Kopál</span>
+          <span class="author-gamecard">autor: R. Kopál</span>
         </div>
        </div>
       
@@ -114,35 +118,70 @@
   </div>
 
 
-<!--**************************************************
-    *TODO treba dorobit footer, pridat co treba      *
-    ***************************************************-->
+  <!--***********************************************
+    *    Pocitadlo pristupov, kontakt a chechlist   *
+    *************************************************-->
     <footer class="bg-dark text-light text-center text-lg-start mt-5">
       <!-- Grid container -->
-      <div class="container p-4">
+      <div class="container-fluid p-4">
         <!--Grid row-->
         <div class="row">
           <!--Grid column-->
           <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Footer text</h5>
+            <h5 class="text-uppercase">Počítadlo prístupov:</h5>
     
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-              molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-              aliquam voluptatem veniam, est atque cumque eum delectus sint!
+               <br>
+              Návštevníkov dnes:<br>
+              Návštevníkov celkovo: <br>
             </p>
           </div>
           <!--Grid column-->
     
           <!--Grid column-->
           <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Footer text</h5>
-    
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-              molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
-              aliquam voluptatem veniam, est atque cumque eum delectus sint!
-            </p>
+            <h5 class="text-uppercase">Kontakt:</h5>
+            <br>
+            <!-- pre kazdeho -->
+            <div class="row" id="contact">
+
+              <div class="contact-person col-sm-6 col-md-6 col-lg-6 col-xl-3 ml-auto">
+                <img src="./assets/img/man.png" alt="Avatar pouzivatela"><br>
+                <span class="contact-name">Roman Bútora</span> <br>
+                <span class="contact-info">
+                  email:rbutora@stuba.sk<br>
+                  mobil: 0939555666
+                </span>
+              </div>
+
+              <div class="contact-person col-sm-6 col-md-6 col-lg-6 col-xl-3 ml-auto">
+                <img src="./assets/img/man.png" alt="Avatar pouzivatela"><br>
+                <span class="contact-name"> Erik Masný</span><br>
+                <span class="contact-info">
+                  email:emasny@stuba.sk<br>
+                  mobil: 0949666777
+                </span>
+                
+              </div>
+
+              <div class="contact-person col-sm-6 col-md-6 col-lg-6 col-xl-3 ml-auto">
+                <img src="./assets/img/man.png" alt="Avatar pouzivatela"><br>
+                <span class="contact-name"> Marek Lunter</span><br>
+                <span class="contact-info">
+                  email:mlunter@stuba.sk<br>
+                  mobil: 0959777888
+                </span>
+              </div>
+
+              <div class="contact-person col-sm-6 col-md-6 col-lg-6 col-xl-3 ml-auto">
+                <img src="./assets/img/man.png" alt="Avatar pouzivatela"><br>
+                <span class="contact-name"> Rastislav Kopál</span><br>
+                <span class="contact-info">
+                  email:rkopal@stuba.sk<br>
+                  mobil: 0969888999
+                </span>
+              </div>
+            </div>
           </div>
           <!--Grid column-->
         </div>
@@ -150,12 +189,11 @@
       </div>
       <!-- Grid container -->
     
-      <!-- Copyright -->
+      
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © 2020 Copyright:
-        <a class="text-dark"">www.blablatext.bla</a>
+        <a class="text-muted"> www.guardiansofwebtech.sk</a>
       </div>
-      <!-- Copyright -->
     </footer>
 
 
