@@ -1,0 +1,102 @@
+#austria-container,
+#czechia-container,
+#poland-container,
+#slovakia-container,
+#romania-container,
+#hungary-container,
+#bulgaria-container,
+#slovenia-container,
+#croatia-container {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+}
+
+#austria-container {
+  top: 290px;
+  left: 220px;
+}
+
+#czechia-container {
+  top: 260px;
+  left: 230px;
+}
+
+#poland-container {
+  width: 70px;
+  height: 55px;
+  top: 210px;
+  left: 240px;
+}
+
+#slovakia-container {
+  height: 20px;
+  left: 265px;
+  top: 270px;
+}
+
+#romania-container {
+  width: 50px;
+  height: 40px;
+  top: 295px;
+  left: 310px;
+}
+
+#bulgaria-container {
+  top: 345px;
+  left: 330px;
+}
+
+#hungary-container {
+  top: 290px;
+  left: 270px;
+}
+
+#croatia-container {
+  height: 20px;
+  top: 325px;
+  left: 240px;
+}
+
+#slovenia-container {
+  height: 10px;
+  top: 320px;
+  left: 230px;
+}
+
+#austria {
+  width: 110px;
+}
+
+#czechia {
+  width: 100px;
+}
+
+#europe {
+  width: 400px;
+}
+
+#poland {
+  width: 130px;
+}
+
+#slovakia {
+  width: 80px;
+}
+
+#romania {
+  width: 120px;
+}
+
+#hungary {
+  width: 100px;
+}
+
+#bulgaria {
+  width: 100px;
+}
+
+#croatia {
+  width: 100px;
+}
+/*# sourceMappingURL=erik_hra.css.map */
