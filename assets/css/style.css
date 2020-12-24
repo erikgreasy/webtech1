@@ -21,10 +21,11 @@ section{
     background-repeat: no-repeat;
     background-size: cover;
     width: auto;
+    position: relative;
 }
 @media screen and (max-width: 1200px) {
     section {
-        height: 30%;
+        height: 50%;
     }
     .center__text {
         font-size: 4rem;
@@ -137,9 +138,10 @@ width: 100%;
     color: whitesmoke;
 }
 .glitch {
-    position: relative;
+    position: absolute;
     color: white;
     mix-blend-mode: lighten;
+    max-width: fit-content;
 }
 .glitch:before, .glitch:after {
     content: attr(data-text);

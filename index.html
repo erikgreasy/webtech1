@@ -11,6 +11,9 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" ></script>
+    <link rel="stylesheet" href="./assets/css/style_roman.css">
 </head>
 
 <body>
@@ -48,11 +51,17 @@
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>
       </ul>
+      <ul class="navbar-nav ml-auto"> 
+        <li class="nav-item  " id="showCalendar" >
+          <a class="nav-link " href="#" >Kalendár menín </a>
+        </li>
+      </ul>
     </div>
   </nav>
 
   <!-- city image in section -->
   <section>
+    <cale-ndar>  </cale-ndar>
     <div class="center">
       <h1 class="center__text glitch is-glitching" data-text="SPOZNAJ!">SPOZNAJ</h1>
     </div>
@@ -201,5 +210,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   <script src="./assets/js/main.js"></script>
+  <script src='./assets/js/scripts_nameDayComponent.js'></script>
 </body>
 </html>
