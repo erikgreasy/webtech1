@@ -1,0 +1,43 @@
+.panel-default > .panel-heading {
+   background-image: none;
+    background-color: rgba(68, 66, 66, 0.726) !important ;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.panel-default > .panel-body {
+    background-image: none;
+     background-color: rgba(68, 66, 66, 0.726) !important ;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+     padding-left: 1%;
+     padding-right: 1%;
+
+
+ }
+
+#nameDay{
+    color: rgb(145, 172, 255);
+}
+.panel-default {
+    margin-left: 50%;
+    margin-right: 0.2%;
+    display: none;
+   margin-bottom: 1%;
+   position: absolute;
+    z-index: 1;
+    min-width: 48%;
+
+}
+
+@media (orientation: portrait) {
+    section .panel-default {
+        margin-left: 2%;
+        margin-right: 0.2%;
+        /*visibility: hidden;*/
+        display: none;
+       margin-bottom: 1%;
+        height: inherit;
+        z-index: 1;
+    }
+}
