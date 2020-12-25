@@ -4,6 +4,7 @@
   flex-direction: row;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
+  margin: 0;
 }
 
 #breadcrumb a {
