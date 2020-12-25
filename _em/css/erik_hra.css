@@ -32,7 +32,7 @@
 #slovakia-container {
   height: 20px;
   left: 265px;
-  top: 270px;
+  top: 275px;
 }
 
 #romania-container {
@@ -97,6 +97,14 @@
 }
 
 #croatia {
-  width: 100px;
+  width: 90px;
+}
+
+#slovenia {
+  width: 50px;
+}
+
+#timer {
+  padding: 10px 20px;
 }
 /*# sourceMappingURL=erik_hra.css.map */
