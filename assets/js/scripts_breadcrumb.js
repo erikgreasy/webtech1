@@ -2,7 +2,6 @@ $( document ).ready(function() {
 
     var lastPages = [];
     var href = document.location.href;
-    var splitHref = href.split("/");
 
     // if cookies not set -> set them ... else get and change
     if ( getCookie('breadcrumbs') == "" ) 
@@ -25,9 +24,9 @@ $( document ).ready(function() {
     }
     
     var breadcrumbs = new Map([
-        ["http://127.0.0.1:5500/gitVersion/index.html", "Bratislava"],
-        ["http://127.0.0.1:5500/gitVersion/", "Bratislava"],
-        ["http://127.0.0.1:5500/gitVersion/_ml/index.html", "Home"]
+        ["http://127.0.0.1:5500/gitVersion/index.html", "Home"],
+        ["http://127.0.0.1:5500/gitVersion/", "Home"],
+        ["http://127.0.0.1:5500/gitVersion/_ml/index.html", "Bratislava"]
     ]);
 
     console.log(lastPages)
