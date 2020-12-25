@@ -1,36 +1,43 @@
 $( document ).ready(function() {
 
-    var breadcrumbArr = [];
+    var lastPages = [];
     var href = document.location.href;
     var splitHref = href.split("/");
-    
+
     // if cookies not set -> set them ... else get and change
     if ( getCookie('breadcrumbs') == "" ) 
     {
-      breadcrumbArr.push(splitHref[splitHref.length -1])
-      setCookie("breadcrumbs", breadcrumbArr, 1)
-      
+      lastPages.push(href)
+      setCookie("breadcrumbs", lastPages, 1)
+
     } else 
     {
-      var breadcrumbArr = getCookie('breadcrumbs').split(',');
+      var lastPages = getCookie('breadcrumbs').split(',');
+      console.log(lastPages)
 
       // only 5 last visited pages
-      if ( breadcrumbArr.length == 5 ) {
-        breadcrumbArr.shift();
+      if ( lastPages.length == 5 ) {
+        lastPages.shift();
       }
 
-      breadcrumbArr.push(splitHref[splitHref.length-1])
-      setCookie("breadcrumbs", breadcrumbArr, 1)
+      lastPages.push(href)
+      setCookie("breadcrumbs", lastPages, 1)
     }
     
-    
-    // print breadcrumb to page
+    var breadcrumbs = new Map([
+        ["http://127.0.0.1:5500/gitVersion/index.html", "Bratislava"],
+        ["http://127.0.0.1:5500/gitVersion/", "Bratislava"],
+        ["http://127.0.0.1:5500/gitVersion/_ml/index.html", "Home"]
+    ]);
+
+    console.log(lastPages)
+    // print breadcrumbs to page
     var breadcrumbEl = $('#breadcrumb')
-    for ( let i = 0; i < breadcrumbArr.length; i++ ) {
-      if ( i == breadcrumbArr.length - 1 ) {
-        breadcrumbEl.append('<li><a href="'+ breadcrumbArr[i] +'">'+breadcrumbArr[i]+'</a></li>')
+    for ( let i = 0; i < lastPages.length; i++ ) {
+      if ( i == lastPages.length - 1 ) {
+        breadcrumbEl.append('<li><a href="' + lastPages[i] + '">' + breadcrumbs.get(lastPages[i]) + '</a> </li>')
       } else {
-        breadcrumbEl.append('<li><a href="'+ breadcrumbArr[i] +'">'+breadcrumbArr[i]+'</a> > </li>')
+        breadcrumbEl.append('<li><a href="' + lastPages[i] + '">' + breadcrumbs.get(lastPages[i]) + '</a> > </li>')
       }
     }
   
