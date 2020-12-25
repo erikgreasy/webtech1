@@ -34,9 +34,9 @@ $( document ).ready(function() {
     var breadcrumbEl = $('#breadcrumb')
     for ( let i = 0; i < lastPages.length; i++ ) {
       if ( i == lastPages.length - 1 ) {
-        breadcrumbEl.append('<li><a href="' + lastPages[i] + '">' + breadcrumbs.get(lastPages[i]) + '</a> </li>')
+        breadcrumbEl.append('<li class="current">' + breadcrumbs.get(lastPages[i].replace('#','')) + '</li>')
       } else {
-        breadcrumbEl.append('<li><a href="' + lastPages[i] + '">' + breadcrumbs.get(lastPages[i]) + '</a> > </li>')
+        breadcrumbEl.append('<li><a href="' + lastPages[i] + '">' + breadcrumbs.get(lastPages[i].replace('#','')) + '</a> > </li>')
       }
     }
   
