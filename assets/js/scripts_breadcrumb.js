@@ -24,13 +24,13 @@ $( document ).ready(function() {
     }
     
     
-  
-    var breadcrumbEl = $('#breadcrumbNav')
-    for (let i = 0; i < 5; i++) {
-      if ( i == 4 ) {
-        breadcrumbEl.append('<li><a href="'+ arr[i] +'">'+arr[i]+'</a></li>')
+    // print breadcrumb to page
+    var breadcrumbEl = $('#breadcrumb')
+    for ( let i = 0; i < breadcrumbArr.length; i++ ) {
+      if ( i == breadcrumbArr.length - 1 ) {
+        breadcrumbEl.append('<li><a href="'+ breadcrumbArr[i] +'">'+breadcrumbArr[i]+'</a></li>')
       } else {
-        breadcrumbEl.append('<li><a href="'+ arr[i] +'">'+arr[i]+'</a> > </li>')
+        breadcrumbEl.append('<li><a href="'+ breadcrumbArr[i] +'">'+breadcrumbArr[i]+'</a> > </li>')
       }
     }
   
