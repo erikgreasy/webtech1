@@ -1,6 +1,7 @@
 
 var timer = new Timer();
 var gameIsRunning = false;
+var demoIsRunning = false;
 var droppable_items_count;
 
 function resizePage(){
@@ -17,7 +18,7 @@ $( document ).ready(function() {
           // snap: '.droppable', // magnet to droppable items
           // snapTolerance: 15, // distance of magnet
           revert: 'invalid', // slide to start if dropped to wrong place
-         // disabled: true,  TODO uncomment
+          disabled: true,
       })    
   });
   
@@ -61,12 +62,13 @@ $( document ).ready(function() {
   });    
 
   $('#startLink').click(function(){ startGame(); });
-  $('#demoLink').click(function(){ trigger_drop(); });
+  $('#demoLink').click(function(){ runDemo(); });
 
 })
 
 function startGame(){
-
+  if (demoIsRunning)
+    return;
   if (gameIsRunning){
     gameIsRunning = false;
     // $('#secondsPassed').html("00:00:00");
@@ -103,15 +105,53 @@ function resumeGame(){
   });
 }
 
-function trigger_drop() {
-  var draggable = $("#draggable1").draggable();
-  var droppable = $("#droppable1").droppable();
-  var droppableOffset = droppable.offset();
-  var draggableOffset = draggable.offset();
-  var dx = droppableOffset.left - draggableOffset.left;
-  var dy = droppableOffset.top - draggableOffset.top;
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-  draggable.simulate("drag-n-drop", {dx: 300, interpolation: {stepWidth: 10, stepDelay: 50}});
+async function trigger_drop() {
+  resumeGame();
+  demoIsRunning= true;
+  
+  droppable_items_count *=2;
+
+  $draggable_items = $('#draggables').find('.draggable').toArray(); // object -> array
+    for (let i = 1; i <13;i++){
+      console.log("#draggable"+i + "..." + "#droppable" + i);
+      let draggable = $("#draggable"+i).draggable(),
+        droppable = $("#droppable"+i).droppable(),
+        droppableOffset = droppable.offset(),
+        draggableOffset = draggable.offset(),
+        dx = droppableOffset.left - draggableOffset.left,
+        dy = droppableOffset.top - draggableOffset.top;
+        console.log(i+ ".. dx:" + dx + " ... dy:" + dy);
+
+        // move the default coursor
+        if (i == 5){
+           dx -= 15; dy-=2;
+        } else if (i == 6){
+           dx -= 15; dy-=2;
+        } else if (i == 7 && window.innerWidth > 1200){
+            dx = 300;dy =-800;
+        } else if (i == 8){
+           dx = -210; dy = -710;
+        }   else if (i == 10){
+           dx = 380; dy = -850;
+        } else if (i == 12){ //dx:-144.53125 ... dy:-852.96875
+          //  dx = -160;
+           dy = -870;
+        } 
+
+      draggable.simulate("drag", {
+          dx: dx,
+          dy: dy
+      });
+      await sleep (1000);
+    }
+
+    await sleep (1000);
+    window.alert("Pre spustenie hry, je po deme potrebné refresnúť stránku.");
+    pauseGame();
 }
 
 function runDemo(){
@@ -119,50 +159,11 @@ function runDemo(){
     window.alert("Cannot run demo while playing.");
     return;
   }
-  // let positions = ['-10.1%','6.5%','190px', '0.1%','25.5%','190px'];
-  let positions = [['10%', '20%'],['10%','40%'],['30%','40%'],['30%','40%'],['30%','40%']];
-  // if (window.innerWidth > 1200){ // large screen
-  //   // left - top -width
-  //   positions = ['10.1%','6.5%','190px'];
-  // } else if (window.innerWidth > 992){ // large screen
+  trigger_drop();
+}
 
-  // } else if (window.innerWidth > 768){ 
-
-  // } else if (window.innerWidth > 700){
-
-  // } else if (window.innerWidth > 556){ // small screen
-
-  // }
-
-  let droppable_count = $('#droppables').find('.droppable').toArray().length;
-  // for (let i=0; i < 3; i++){
-
-    $( "#droppable1" ).trigger('drop');
-  //   $("#draggable"+i).css({
-  //         position: 'absolute',
-  //         width: "50%",
-  //         height: "auto"
-  //     }).animate({
-  //       left: String(positions[i[0]]),
-  //       top: String(positions[i[1]]),
-  //   });
-  // }
-  
-  // $("#draggable1").css({
-  //   "position" : "absolute",
-  // }).animate({
-  //       "left": "620px",
-  //       "top": "50px",
-  //   });
-  
-  // uncomplete.forEach( item => {
-  //     let finalItemPos = finalPositions[item];
-  //     $( item ).css({
-  //         position: 'absolute'
-  //     })
-  //     $( item ).animate({
-  //         left: finalItemPos.left,
-  //         top: finalItemPos.top
-  //     }, 1000)
-  // } )
+function letsPlay(){
+  $("#beforeGame").css({
+    "display": "none",
+  });
 }

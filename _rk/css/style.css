@@ -172,6 +172,9 @@ body {
     #draggable9 {
         width: 44%;
     }
+    #beforeText{
+        width: 30%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -187,6 +190,9 @@ body {
     #draggable9 {
         width: 39%;
     }
+    #beforeText{
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -201,6 +207,9 @@ body {
     }
     #draggable9{
         width: 40%;
+    }
+    #beforeText{
+        width: 100%;
     }
 }
 
@@ -221,6 +230,9 @@ body {
     #draggable9{
         width: 36%;
     }
+    #beforeText{
+        width: 100%;
+    }
 }
 
 @media (max-width: 556px) {
@@ -239,8 +251,30 @@ body {
     #draggable9{
         width: 41%;
     }
+    #beforeText{
+        width: 100%;
+    }
 }
 
-footer{
-    
+#beforeGame{
+    position: fixed;
+    background-color: rgba(64, 64, 65, 0.8);   /*  70% opaque green */
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    overflow: hidden;
 }
+#beforeText{
+    width: 30%;
+    background-color: white;
+    min-height: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    padding: 2% 5% 2% 5%;
+
+}
+
+/* footer{
+    
+} */
