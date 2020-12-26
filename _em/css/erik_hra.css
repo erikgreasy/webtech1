@@ -64,47 +64,12 @@
   left: 230px;
 }
 
-#austria {
-  width: 110px;
-}
-
-#czechia {
-  width: 100px;
+#timer {
+  padding: 10px 20px;
 }
 
 #europe {
-  width: 400px;
-}
-
-#poland {
-  width: 130px;
-}
-
-#slovakia {
-  width: 80px;
-}
-
-#romania {
-  width: 120px;
-}
-
-#hungary {
-  width: 100px;
-}
-
-#bulgaria {
-  width: 100px;
-}
-
-#croatia {
-  width: 90px;
-}
-
-#slovenia {
-  width: 50px;
-}
-
-#timer {
-  padding: 10px 20px;
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=erik_hra.css.map */

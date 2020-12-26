@@ -12,27 +12,80 @@ $( '#demoBtn' ).click( function() {
     demo()
 })
 
+var europeWidth = $('#europe').width()
+var europeHeight = $('#europe').height()
+console.log( `Euro width: ${europeWidth}` )
+console.log( `Euro height: ${europeHeight}` )
+
+
+
+/**
+ * Setting responsive width of countries
+ */
+$( '#czechia' ).css({
+    width: europeWidth*0.24 + 'px'
+})
+$( '#hungary' ).css({
+    width: europeWidth/4 + 'px'
+})
+$( '#bulgaria' ).css({
+    width: europeWidth*0.23 + 'px'
+})
+
+$( '#austria' ).css({
+    width: europeWidth*0.278 + 'px'
+})
+$( '#poland' ).css({
+    width: europeWidth*0.325 + 'px'
+})
+$( '#slovakia' ).css({
+    width: europeWidth*0.175 + 'px'
+})
+$( '#romania' ).css({
+    width: europeWidth*0.3 + 'px'
+})
+$( '#croatia' ).css({
+    width: europeWidth*0.225 + 'px'
+})
+$( '#slovenia' ).css({
+    width: europeWidth*0.125 + 'px'
+})
+
+
+
 const finalPositions = {
-    '#czechia' : { top: 240, left: 201 },
-    '#austria' : { top: 263, left: 173 },
-    '#poland' : {top: 191, left: 215},
-    '#slovakia' : {top: 256, left: 248},
-    '#romania' : {top: 270, left: 277},
-    '#hungary' : {top: 275, left: 236},
-    '#bulgaria' : {top: 324, left: 298},
-    '#slovenia' : {top: 299, left: 217},
-    '#croatia' : {top: 298, left: 216},
+    // '#czechia' : { top: 240, left: 201 },
+    '#czechia' : { top: 240 + ((europeWidth-400)/100) * 47, left: europeWidth*0.5025 },
+
+    // '#austria' : { top: 263, left: 173 },
+    '#austria' : { top: 263 + ((europeWidth-400)/100) * 51.5, left: europeWidth*0.431 },
+
+    // '#poland' : {top: 191, left: 215},
+    '#poland' : {top: 191 + ((europeWidth-400)/100) * 34, left: europeWidth*0.5375},
+
+    // '#slovakia' : {top: 256, left: 248},
+    '#slovakia' : {top: 259 + ((europeWidth-400)/100) * 51.5 , left: europeWidth*0.63},
+
+    // '#romania' : {top: 270, left: 277},
+    '#romania' : {top: 270 + ((europeWidth-400)/100) * 53.55, left: europeWidth*0.6925},
+
+    // '#hungary' : {top: 275, left: 236},
+    '#hungary' : {top: 275 + ((europeWidth-400)/100) * 55, left: europeWidth*0.59},
+
+    // '#bulgaria' : {top: 324, left: 298},
+    '#bulgaria' : {top: 328 + ((europeWidth-400)/100) * 68, left: europeWidth*0.752},
+
+    // '#slovenia' : {top: 299, left: 217},
+    '#slovenia' : {top: 299 + ((europeWidth-400)/100) * 61, left: europeWidth*0.545},
+
+    // '#croatia' : {top: 298, left: 216},
+    '#croatia' : {top: 298 + ((europeWidth-400)/100) * 60.7, left: europeWidth*0.541},
+
 
 
 }
+console.log( 263 + ((europeWidth-400)/100) * 51  )
 
-const originalPositions = {
-        
-    czechia : $( '#czechia' ).position()
-        
-}
-
-console.log( originalPositions )
 
 
 let uncomplete = [
@@ -77,7 +130,6 @@ function makeDroppable( objectSelector, targetSelector, finalPos ) {
                 endGame();
             }
 
-
             $( objectSelector ).css({
                 position: 'absolute',
                 left: finalPos.left + 'px',
@@ -86,6 +138,8 @@ function makeDroppable( objectSelector, targetSelector, finalPos ) {
 
         },
         deactivate: function() {
+            console.log( $( objectSelector ).position() )
+
             if( $( this ).hasClass( 'active' ) ) {
 
                 
