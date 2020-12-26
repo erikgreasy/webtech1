@@ -17,7 +17,60 @@ var europeHeight = $('#europe').height()
 console.log( `Euro width: ${europeWidth}` )
 console.log( `Euro height: ${europeHeight}` )
 
-
+$( '#austria-container' ).css({
+    width: europeWidth*0.075,
+    height: europeWidth*0.075,
+    top: 290 + ((europeWidth-400)/100) * 59,
+    left: europeWidth*0.55
+})
+$( '#czechia-container' ).css({
+    width: europeWidth*0.075,
+    height: europeWidth*0.075,
+    top: 260 + ((europeWidth-400)/100) * 50,
+    left: europeWidth*0.58
+})
+$( '#poland-container' ).css({
+    width: europeWidth*0.175,
+    height: europeWidth*0.1375,
+    top: 210 + ((europeWidth-400)/100) * 40,
+    left: europeWidth*0.6
+})
+$( '#slovakia-container' ).css({
+    width: europeWidth*0.075,
+    height: europeWidth*0.05,
+    top: 275 + ((europeWidth-400)/100) * 55,
+    left: europeWidth*0.67
+})
+$( '#romania-container' ).css({
+    width: europeWidth*0.125,
+    height: europeWidth*0.1,
+    top: 295 + ((europeWidth-400)/100) * 60,
+    left: europeWidth*0.78
+})
+$( '#bulgaria-container' ).css({
+    width: europeWidth*0.075,
+    height: europeWidth*0.075,
+    top: 345 + ((europeWidth-400)/100) * 73,
+    left: europeWidth*0.82
+})
+$( '#hungary-container' ).css({
+    width: europeWidth*0.075,
+    height: europeWidth*0.075,
+    top: 290 + ((europeWidth-400)/100) * 62,
+    left: europeWidth*0.67
+})
+$( '#croatia-container' ).css({
+    width: europeWidth*0.075,
+    height: europeWidth*0.05,
+    top: 325 + ((europeWidth-400)/100) * 67,
+    left: europeWidth*0.6
+})
+$( '#slovenia-container' ).css({
+    width: europeWidth*0.075,
+    height: europeWidth*0.025,
+    top: 320 + ((europeWidth-400)/100) * 65,
+    left: europeWidth*0.56
+})
 
 /**
  * Setting responsive width of countries
