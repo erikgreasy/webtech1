@@ -12,7 +12,6 @@ $( document ).ready(function() {
     } else 
     {
       var lastPages = getCookie('breadcrumbs').split(',');
-      console.log(lastPages)
 
       // only 5 last visited pages
       if ( lastPages.length == 5 ) {
@@ -24,19 +23,20 @@ $( document ).ready(function() {
     }
     
     var breadcrumbs = new Map([
-        ["http://127.0.0.1:5500/gitVersion/index.html", "Home"],
-        ["http://127.0.0.1:5500/gitVersion/", "Home"],
-        ["http://127.0.0.1:5500/gitVersion/_ml/index.html", "Bratislava"]
+        ["index.html", "Home"],
+        ["", "Home"],
+        ["bratislava.html", "Bratislava"]
     ]);
 
-    console.log(lastPages)
     // print breadcrumbs to page
     var breadcrumbEl = $('#breadcrumb')
     for ( let i = 0; i < lastPages.length; i++ ) {
+      var splittedUrl = lastPages[i].split('/');
+      console.log(splittedUrl)
       if ( i == lastPages.length - 1 ) {
-        breadcrumbEl.append('<li class="current">' + breadcrumbs.get(lastPages[i].replace('#','')) + '</li>')
+        breadcrumbEl.append('<li class="current">' + breadcrumbs.get(splittedUrl[splittedUrl.length - 1].replace('#','')) + '</li>')
       } else {
-        breadcrumbEl.append('<li><a href="' + lastPages[i] + '">' + breadcrumbs.get(lastPages[i].replace('#','')) + '</a> > </li>')
+        breadcrumbEl.append('<li><a href="' + lastPages[i] + '">' + breadcrumbs.get(splittedUrl[splittedUrl.length - 1].replace('#','')) + '</a> > </li>')
       }
     }
   
