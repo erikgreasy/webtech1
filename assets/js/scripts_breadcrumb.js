@@ -23,8 +23,8 @@ $( document ).ready(function() {
     }
     
     var breadcrumbs = new Map([
-        ["index.html", "Home"],
         ["", "Home"],
+        ["index.html", "Home"],
         ["bratislava.html", "Bratislava"]
     ]);
 
