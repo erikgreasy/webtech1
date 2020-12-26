@@ -20,6 +20,8 @@ let uncomplete = [
     '#croatia',
 ]
 
+$('#modal').modal()
+
 // positions where user should drag countries
 const finalPositions = {
     '#czechia' : { top: 184 + ((europeWidth-400)/100) * 47, left: europeWidth*0.5025 + $( '#europe' ).position().left },
@@ -190,6 +192,14 @@ function makeDroppable( objectSelector, targetSelector, finalPos ) {
  */
 function endGame() {
     clearInterval( interval )
+    $( '#modal .modal-text' ).html( `
+            <h4>Gratulujeme</h4>
+            <p>Podarilo sa ti správne vyskladať všetky štáty.</p>
+            <p>Tvoj výsledný čas je <strong>${timePassed} sekúnd</strong></p>
+    ` );
+    $( '#modal .modal-btn' ).html( 'Zavrieť' );
+    $('#modal').modal()
+
 }
 
 /**
@@ -211,7 +221,7 @@ function startGame() {
     makeDroppable( '#slovenia', '#slovenia-container', finalPositions['#slovenia'] )
     makeDroppable( '#croatia', '#croatia-container', finalPositions['#croatia'] )
     timePassed = 0;
-    $( '#startBtn' ).html( 'start again' )
+    $( '#startBtn' ).html( 'Reštartovať' )
     interval = setInterval( function() {
         timePassed++;
         $( '#timer span' ).html( timePassed )
@@ -226,7 +236,7 @@ function demo() {
         location.reload()
     }
     demoRunning = true;
-    $( '#demoBtn' ).html( 'end demo' )
+    $( '#demoBtn' ).html( 'Ukončiť demo' )
     $( '#startBtn' ).prop( 'disabled', 'true' )
 
     uncomplete.forEach( item => {
