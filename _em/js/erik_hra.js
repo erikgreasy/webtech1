@@ -22,23 +22,23 @@ let uncomplete = [
 
 // positions where user should drag countries
 const finalPositions = {
-    '#czechia' : { top: 240 + ((europeWidth-400)/100) * 47, left: europeWidth*0.5025 },
+    '#czechia' : { top: 184 + ((europeWidth-400)/100) * 47, left: europeWidth*0.5025 + $( '#europe' ).position().left },
 
-    '#austria' : { top: 263 + ((europeWidth-400)/100) * 51.5, left: europeWidth*0.431 },
+    '#austria' : { top: 207 + ((europeWidth-400)/100) * 51.5, left: europeWidth*0.431 + $( '#europe' ).position().left },
 
-    '#poland' : {top: 191 + ((europeWidth-400)/100) * 34, left: europeWidth*0.5375},
+    '#poland' : {top: 135 + ((europeWidth-400)/100) * 34, left: europeWidth*0.5375 + $( '#europe' ).position().left },
 
-    '#slovakia' : {top: 259 + ((europeWidth-400)/100) * 51.5 , left: europeWidth*0.63},
+    '#slovakia' : {top: 203 + ((europeWidth-400)/100) * 51.5 , left: europeWidth*0.63 + $( '#europe' ).position().left },
 
-    '#romania' : {top: 270 + ((europeWidth-400)/100) * 53.55, left: europeWidth*0.6925},
+    '#romania' : {top: 214 + ((europeWidth-400)/100) * 53.55, left: europeWidth*0.6925 + $( '#europe' ).position().left },
 
-    '#hungary' : {top: 275 + ((europeWidth-400)/100) * 55, left: europeWidth*0.59},
+    '#hungary' : {top: 219 + ((europeWidth-400)/100) * 55, left: europeWidth*0.59 + $( '#europe' ).position().left },
 
-    '#bulgaria' : {top: 328 + ((europeWidth-400)/100) * 68, left: europeWidth*0.752},
+    '#bulgaria' : {top: 272 + ((europeWidth-400)/100) * 68, left: europeWidth*0.752 + $( '#europe' ).position().left },
 
-    '#slovenia' : {top: 299 + ((europeWidth-400)/100) * 61, left: europeWidth*0.545},
+    '#slovenia' : {top: 243 + ((europeWidth-400)/100) * 61, left: europeWidth*0.545 + $( '#europe' ).position().left },
 
-    '#croatia' : {top: 298 + ((europeWidth-400)/100) * 60.7, left: europeWidth*0.541},
+    '#croatia' : {top: 242 + ((europeWidth-400)/100) * 60.7, left: europeWidth*0.541 + $( '#europe' ).position().left },
 }
 
 
@@ -60,56 +60,56 @@ $( '#demoBtn' ).click( function() {
 $( '#austria-container' ).css({
     width: europeWidth*0.075,
     height: europeWidth*0.075,
-    top: 290 + ((europeWidth-400)/100) * 59,
-    left: europeWidth*0.55
+    top: 234 + ((europeWidth-400)/100) * 59,
+    left: europeWidth*0.55 + $( '#europe' ).position().left
 })
 $( '#czechia-container' ).css({
     width: europeWidth*0.075,
     height: europeWidth*0.075,
-    top: 260 + ((europeWidth-400)/100) * 50,
-    left: europeWidth*0.58
+    top: 204 + ((europeWidth-400)/100) * 50,
+    left: europeWidth*0.58 + $( '#europe' ).position().left
 })
 $( '#poland-container' ).css({
     width: europeWidth*0.175,
     height: europeWidth*0.1375,
-    top: 210 + ((europeWidth-400)/100) * 40,
-    left: europeWidth*0.6
+    top: 154 + ((europeWidth-400)/100) * 40,
+    left: europeWidth*0.6 + $( '#europe' ).position().left
 })
 $( '#slovakia-container' ).css({
     width: europeWidth*0.075,
     height: europeWidth*0.05,
-    top: 275 + ((europeWidth-400)/100) * 55,
-    left: europeWidth*0.67
+    top: 220 + ((europeWidth-400)/100) * 55,
+    left: europeWidth*0.67 + $( '#europe' ).position().left
 })
 $( '#romania-container' ).css({
     width: europeWidth*0.125,
     height: europeWidth*0.1,
-    top: 295 + ((europeWidth-400)/100) * 60,
-    left: europeWidth*0.78
+    top: 239 + ((europeWidth-400)/100) * 60,
+    left: europeWidth*0.78 + $( '#europe' ).position().left
 })
 $( '#bulgaria-container' ).css({
     width: europeWidth*0.075,
     height: europeWidth*0.075,
-    top: 345 + ((europeWidth-400)/100) * 73,
-    left: europeWidth*0.82
+    top: 289 + ((europeWidth-400)/100) * 73,
+    left: europeWidth*0.82 + $( '#europe' ).position().left
 })
 $( '#hungary-container' ).css({
     width: europeWidth*0.075,
     height: europeWidth*0.075,
-    top: 290 + ((europeWidth-400)/100) * 62,
-    left: europeWidth*0.67
+    top: 234 + ((europeWidth-400)/100) * 62,
+    left: europeWidth*0.67 + $( '#europe' ).position().left
 })
 $( '#croatia-container' ).css({
     width: europeWidth*0.075,
     height: europeWidth*0.05,
-    top: 325 + ((europeWidth-400)/100) * 67,
-    left: europeWidth*0.6
+    top: 269 + ((europeWidth-400)/100) * 67,
+    left: europeWidth*0.6 + $( '#europe' ).position().left
 })
 $( '#slovenia-container' ).css({
     width: europeWidth*0.075,
     height: europeWidth*0.025,
-    top: 320 + ((europeWidth-400)/100) * 65,
-    left: europeWidth*0.56
+    top: 264 + ((europeWidth-400)/100) * 65,
+    left: europeWidth*0.56 + $( '#europe' ).position().left
 })
 
 
