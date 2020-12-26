@@ -6,59 +6,73 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script
-        src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-        crossorigin="anonymous"></script>
-    <script
-        src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <!-- <link rel="stylesheet" href="../assets/css/style_breadcrumb.css"> -->
 </head>
 
 <body onresize="resizePage()">
-   
-    <!-- <div  class="container"> -->
-    
-    <div id="map-div">
-        <div id="main-frame"> 
-            <!-- <img src="./img/map.png" alt="" id="map-img"> -->
-            <div id="droppable_na" class="dropdiv droppable"></div>
-            <div id="droppable_sa" class="dropdiv droppable"></div>
-            <div id="droppable_cb" class="dropdiv droppable"></div>
-            <div id="droppable_eu" class="dropdiv droppable"></div>
-            <div id="droppable_af" class="dropdiv droppable"></div>
-            <div id="droppable_me" class="dropdiv droppable"></div>
-            <div id="droppable_ca" class="dropdiv droppable"></div>
-            <div id="droppable_as"  class="dropdiv droppable"></div>
-            <div id="droppable_au" class="dropdiv droppable"></div>
-            <div id="droppable_gl" class="dropdiv droppable"></div>
-            <div id="droppable_ar" class="dropdiv droppable"></div>
-            <div id="droppable_sea" class="dropdiv droppable"></div>
-       </div>
-    
 
-    <hr>
-        <!-- <div class="row">  -->
-            <img src="./img/sa.png" alt="Cropped image- draggable - south america" id="draggable_sa" class="draggable-continent draggable">
-            <img src="./img/na.png" alt="Cropped image- draggable - north america" id="draggable_na" class="draggable-continent draggable">
-            <img src="./img/cb.png" alt="Cropped image- draggable - caribbean" id="draggable_cb"  class="draggable-continent draggable">
-            <img src="./img/eu.png" alt="Cropped image- draggable part." class="draggable-continent draggable" id="draggable_eu">
-            <img src="./img/af.png" alt="Cropped image- draggable part." class="draggable-continent draggable" id="draggable_af">
-            <img src="./img/me.png" alt="Cropped image- draggable part." class="draggable-continent draggable" id="draggable_me">
-            <img src="./img/ca.png" alt="Cropped image- draggable part." class="draggable-continent draggable" id="draggable_ca">
-            <img src="./img/asia.png" alt="Cropped image- draggable part." class="draggable-continent draggable" id="draggable_as">
-            <img src="./img/au.png" alt="Cropped image- draggable part." class="draggable-continent draggable" id="draggable_au">
-            <img src="./img/greenland.png" alt="Cropped image- draggable part." class="draggable-continent draggable" id="draggable_gl">
-            <img src="./img/sea.png" alt="Cropped image- draggable part." class="draggable-continent draggable" id="draggable_sea">
-            <img src="./img/antarctica.png" alt="Cropped image- draggable part." class="draggable-continent draggable" id="draggable_ar">
+    <div class="container-fluid bg-dark navbar-dark pt-2 pb-2">
+        <div class="row">
+            <a class="navbar-brand col-sm-12 col-md-3 col-lg-3 col-xl-3 ml-auto" href="../index.html"> < Back</a>
+        
+            <a class="navbar-brand col-sm-12 col-md-3 col-lg-3 col-xl-3 ml-auto text-warning " href="#" id="demoLink">Demo</a>
+
+            <a class="navbar-brand col-sm-12 col-md-3 col-lg-3 col-xl-3 ml-auto text-danger" href="#" id="startLink">START</a>
+            </div>
+        </div>
+    </div>
+
+    <span id="secondsPassed" class="bg-danger px-2 py-3">00:00:00</span>
+      
+    <!-- <ul id="breadcrumb"></ul> -->
+
+    <div class="container-lg">
+        
+        
+        <div class="dropDiv">
+            <img id="map" src="img/map.png" alt="Slepá mapa sveta.">
+            <div id="droppables">
+                <div class="droppable" id="droppable1"></div>
+                <div class="droppable" id="droppable2"></div>
+                <div class="droppable" id="droppable3"></div>
+                <div class="droppable" id="droppable4"></div>
+                <div class="droppable" id="droppable5"></div>
+                <div class="droppable" id="droppable6"></div>
+                <div class="droppable" id="droppable7"></div>
+                <div class="droppable" id="droppable8"></div>
+                <div class="droppable" id="droppable9"></div>
+                <div class="droppable" id="droppable10"></div>
+                <div class="droppable" id="droppable11"></div>
+                <div class="droppable" id="droppable12"></div>
+            </div>
         </div>
         
-    <!-- </div> -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  <!-- <script src="jquery.ui.touch-punch.min.js"></script> -->
-  
-  <script src="js/myScript.js"></script>
+        <div id="draggables" class="list">
+            <li><img class="draggable" id="draggable1" src="./img/1_na.png" alt="Draggable cast - sev. amerika"></li>
+            <li><img class="draggable" id="draggable2" src="./img/2_sa.png" alt="Draggable cast -  juz. amerika"></li>
+            <li><img class="draggable" id="draggable3" src="./img/3_cb.png" alt="Draggable cast - karibik "></li>
+            <li><img class="draggable" id="draggable4" src="./img/4_greenland.png" alt="Draggable cast - gronsko"></li>
+            <li><img class="draggable" id="draggable5" src="./img/5_eu.png" alt="Draggable cast - europa"></li>
+            <li><img class="draggable" id="draggable6" src="./img/6_af.png" alt="Draggable cast - afrika"></li>
+            <li><img class="draggable" id="draggable7" src="./img/7_asia.png" alt="Draggable cast - azia"></li>
+            <li><img class="draggable" id="draggable8" src="./img/8_me.png" alt="Draggable cast - blizky vychod"></li>
+            <li><img class="draggable" id="draggable9" src="./img/9_ar.png" alt="Draggable cast - arktida"></li>
+            <li><img class="draggable" id="draggable10" src="./img/10_au.png" alt="Draggable cast - australia"></li>
+            <li><img class="draggable" id="draggable11" src="./img/11_ca.png" alt="Draggable cast - centralna azia"></li>
+            <li><img class="draggable" id="draggable12" src="./img/12_sea.png" alt="Draggable cast - Juhovychodna azia"></li>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-light py-3">
+        Rastislav Kopál: 97830
+    </footer>
+        
+    <script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.1/src/easytimer.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="js/myScript.js"></script>
 </body>
 </html>
