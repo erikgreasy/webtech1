@@ -111,15 +111,15 @@ function startGame() {
     }
     gameRunning = true;
     $( '#demoBtn' ).prop('disabled', 'true')
-    makeDroppable( '#czechia', '#czechia-container', {top: 240, left: 201})
-    makeDroppable( '#austria', '#austria-container', {top: 263, left: 173} )
-    makeDroppable( '#poland', '#poland-container', {top: 191, left: 215} )
-    makeDroppable( '#slovakia', '#slovakia-container', {top: 256, left: 248} )
-    makeDroppable( '#romania', '#romania-container', {top: 270, left: 277} )
-    makeDroppable( '#hungary', '#hungary-container', {top: 275, left: 236} )
-    makeDroppable( '#bulgaria', '#bulgaria-container', {top: 324, left: 298} )
-    makeDroppable( '#slovenia', '#slovenia-container', {top: 299, left: 217} )
-    makeDroppable( '#croatia', '#croatia-container', {top: 298, left: 216} )
+    makeDroppable( '#czechia', '#czechia-container', finalPositions['#czechia'])
+    makeDroppable( '#austria', '#austria-container', finalPositions['#austria'] )
+    makeDroppable( '#poland', '#poland-container', finalPositions['#poland'] )
+    makeDroppable( '#slovakia', '#slovakia-container', finalPositions['#slovakia'] )
+    makeDroppable( '#romania', '#romania-container', finalPositions['#romania'] )
+    makeDroppable( '#hungary', '#hungary-container', finalPositions['#hungary'] )
+    makeDroppable( '#bulgaria', '#bulgaria-container', finalPositions['#bulgaria'] )
+    makeDroppable( '#slovenia', '#slovenia-container', finalPositions['#slovenia'] )
+    makeDroppable( '#croatia', '#croatia-container', finalPositions['#croatia'] )
     timePassed = 0;
     $( '#startBtn' ).html( 'start again' )
     interval = setInterval( function() {
