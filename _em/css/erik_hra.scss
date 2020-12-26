@@ -51,4 +51,7 @@ body {
     @media (min-width: 768px) {
         min-height: 300px;
     }
+    img {
+        z-index: 10;
+    }
 }

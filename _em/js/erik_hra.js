@@ -175,6 +175,7 @@ function makeDroppable( objectSelector, targetSelector, finalPos ) {
 
             $( objectSelector ).css({
                 position: 'absolute',
+                'z-index': 2, 
                 left: finalPos.left + 'px',
                 top: finalPos.top + 'px'
             })
