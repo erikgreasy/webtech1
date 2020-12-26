@@ -1,5 +1,46 @@
+/**
+ * Variables
+ */
 let demoRunning = false;
 let gameRunning = false;
+var europeWidth = $('#europe').width()
+var interval;
+var timePassed = 0;
+
+// countries that are not successfully completed
+let uncomplete = [
+    '#czechia',
+    '#austria',
+    '#poland',
+    '#slovakia',
+    '#romania',
+    '#hungary',
+    '#bulgaria',
+    '#slovenia',
+    '#croatia',
+]
+
+// positions where user should drag countries
+const finalPositions = {
+    '#czechia' : { top: 240 + ((europeWidth-400)/100) * 47, left: europeWidth*0.5025 },
+
+    '#austria' : { top: 263 + ((europeWidth-400)/100) * 51.5, left: europeWidth*0.431 },
+
+    '#poland' : {top: 191 + ((europeWidth-400)/100) * 34, left: europeWidth*0.5375},
+
+    '#slovakia' : {top: 259 + ((europeWidth-400)/100) * 51.5 , left: europeWidth*0.63},
+
+    '#romania' : {top: 270 + ((europeWidth-400)/100) * 53.55, left: europeWidth*0.6925},
+
+    '#hungary' : {top: 275 + ((europeWidth-400)/100) * 55, left: europeWidth*0.59},
+
+    '#bulgaria' : {top: 328 + ((europeWidth-400)/100) * 68, left: europeWidth*0.752},
+
+    '#slovenia' : {top: 299 + ((europeWidth-400)/100) * 61, left: europeWidth*0.545},
+
+    '#croatia' : {top: 298 + ((europeWidth-400)/100) * 60.7, left: europeWidth*0.541},
+}
+
 
 /**
  * Event listeners
@@ -12,11 +53,10 @@ $( '#demoBtn' ).click( function() {
     demo()
 })
 
-var europeWidth = $('#europe').width()
-var europeHeight = $('#europe').height()
-console.log( `Euro width: ${europeWidth}` )
-console.log( `Euro height: ${europeHeight}` )
 
+/**
+ * Countries containers responsivity
+ */
 $( '#austria-container' ).css({
     width: europeWidth*0.075,
     height: europeWidth*0.075,
@@ -72,6 +112,7 @@ $( '#slovenia-container' ).css({
     left: europeWidth*0.56
 })
 
+
 /**
  * Setting responsive width of countries
  */
@@ -105,60 +146,10 @@ $( '#slovenia' ).css({
 })
 
 
-
-const finalPositions = {
-    // '#czechia' : { top: 240, left: 201 },
-    '#czechia' : { top: 240 + ((europeWidth-400)/100) * 47, left: europeWidth*0.5025 },
-
-    // '#austria' : { top: 263, left: 173 },
-    '#austria' : { top: 263 + ((europeWidth-400)/100) * 51.5, left: europeWidth*0.431 },
-
-    // '#poland' : {top: 191, left: 215},
-    '#poland' : {top: 191 + ((europeWidth-400)/100) * 34, left: europeWidth*0.5375},
-
-    // '#slovakia' : {top: 256, left: 248},
-    '#slovakia' : {top: 259 + ((europeWidth-400)/100) * 51.5 , left: europeWidth*0.63},
-
-    // '#romania' : {top: 270, left: 277},
-    '#romania' : {top: 270 + ((europeWidth-400)/100) * 53.55, left: europeWidth*0.6925},
-
-    // '#hungary' : {top: 275, left: 236},
-    '#hungary' : {top: 275 + ((europeWidth-400)/100) * 55, left: europeWidth*0.59},
-
-    // '#bulgaria' : {top: 324, left: 298},
-    '#bulgaria' : {top: 328 + ((europeWidth-400)/100) * 68, left: europeWidth*0.752},
-
-    // '#slovenia' : {top: 299, left: 217},
-    '#slovenia' : {top: 299 + ((europeWidth-400)/100) * 61, left: europeWidth*0.545},
-
-    // '#croatia' : {top: 298, left: 216},
-    '#croatia' : {top: 298 + ((europeWidth-400)/100) * 60.7, left: europeWidth*0.541},
-
-
-
-}
-console.log( 263 + ((europeWidth-400)/100) * 51  )
-
-
-
-let uncomplete = [
-    '#czechia',
-    '#austria',
-    '#poland',
-    '#slovakia',
-    '#romania',
-    '#hungary',
-    '#bulgaria',
-    '#slovenia',
-    '#croatia',
-]
-
-
-
-
-
-
-
+/**
+ * Takes country(objectSelector), country-container(targetSelector) and coordinates where should user drag the country (finalPos)
+ * Makes target droppable and object draggable
+ */
 function makeDroppable( objectSelector, targetSelector, finalPos ) {
     
     $( objectSelector ).draggable({
@@ -178,7 +169,6 @@ function makeDroppable( objectSelector, targetSelector, finalPos ) {
             if (index > -1) {
                 uncomplete.splice(index, 1);
             }
-            console.log( uncomplete )
             if( uncomplete.length == 0 ) {
                 endGame();
             }
@@ -190,28 +180,20 @@ function makeDroppable( objectSelector, targetSelector, finalPos ) {
             })
 
         },
-        deactivate: function() {
-            console.log( $( objectSelector ).position() )
-
-            if( $( this ).hasClass( 'active' ) ) {
-
-                
-            } else {
-
-            }
-        }
     });
 }
 
 
-var interval;
-var timePassed = 0;
-
+/**
+ * Gets called on end of the game
+ */
 function endGame() {
-    alert( 'game ended' )
     clearInterval( interval )
 }
 
+/**
+ * Called after startBtn click. Initiate dragability and starts timer
+ */
 function startGame() {
     if( gameRunning ) {
         location.reload()
@@ -235,6 +217,9 @@ function startGame() {
     }, 1000 )
 }
 
+/**
+ * Put countries in their right spots automatically
+ */
 function demo() {
     if( demoRunning ) {
         location.reload()
