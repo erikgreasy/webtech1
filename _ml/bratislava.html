@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/style_breadcrumb.css">
+    <title>Drag&Drop game</title>
+</head>
+    <body>
+        <header>
+            <h1>Webtech Puzzle</h1>
+        </header>
+
+        <ul id="breadcrumb">
+
+        </ul>
+
+        <div class="container-lg">
+            
+            <p class="description"> 
+                <strong>Pravidlá hry:</strong> Stlač "Start" pod časovačom a snaž čo narýchlejšie poskladať rozpadnutú Bratisku opäť dokopy. Keď poukladáš všetky časti správne časovač sa sám zastaví. Pre opakovanie pokusu stlač "Reset". Pre ukážku poskladania tejto komplikovanej skladačky stlač <a href="#" id="demo" id="reset">Demo</a>.
+            </p>
+            
+            <div class="wrap">
+                <img id="blindMap" src="assets/images/droppable2/blindBA.png" alt="">
+                <div id="droppable-items">
+                    <div class="droppable" id="dropPart1"></div>
+                    <div class="droppable" id="dropPart2"></div>
+                    <div class="droppable" id="dropPart3"></div>
+                    <div class="droppable" id="dropPart4"></div>
+                    <div class="droppable" id="dropPart5"></div>
+                    <div class="droppable" id="dropPart6"></div>
+                    <div class="droppable" id="dropPart7"></div>
+                    <div class="droppable" id="dropPart8"></div>
+                    <div class="droppable" id="dropPart9"></div>
+                    <div class="droppable" id="dropPart10"></div>
+                </div>
+            </div>
+            
+            <div id="draggable-items" class="list">
+                <li><img id="dragPart1" class="draggable" src="assets/images/draggable2/DevNovaVes.png" alt=""></li>
+                <li><img id="dragPart2" class="draggable" src="assets/images/draggable2/Dubravka.png" alt=""></li>
+                <li><img id="dragPart3" class="draggable" src="assets/images/draggable2/KarlovaVes.png" alt=""></li>
+                <li><img id="dragPart4" class="draggable" src="assets/images/draggable2/Lamac.png" alt=""></li>
+                <li><img id="dragPart5" class="draggable" src="assets/images/draggable2/NoveMesto.png" alt=""></li>
+                <li><img id="dragPart6" class="draggable" src="assets/images/draggable2/Raca.png" alt=""></li>
+                <li><img id="dragPart7" class="draggable" src="assets/images/draggable2/StareMesto.png" alt=""></li>
+                <li><img id="dragPart8" class="draggable" src="assets/images/draggable2/Vajnory.png" alt=""></li>
+                <li><img id="dragPart9" class="draggable" src="assets/images/draggable2/ZahBystrica.png" alt=""></li>
+                <li><img id="dragPart10" class="draggable" src="assets/images/draggable2/Devin.png" alt=""></li>
+            </div>
+
+            <div class="group"></div>
+            <div id="myTimer">
+                <h3>Your time:</h3>
+                <div class="values">00:00:00</div>
+                
+                <a href="#" class="btn startButton" id="start">Start</a>
+                <a href="bratislava.html" class="btn" id="reset">Reset</a>
+            </div>
+
+        </div>
+        
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+        <script src="assets/js/easytimer.min.js"></script>
+        <script src="../assets/js/scripts_breadcrumb.js"></script>
+        <script src="assets/js/script.js"></script>
+        <footer>
+            <span> Marek Lunter &nbsp; ID: 97859</span>
+        </footer>
+    </body>
+</html>
