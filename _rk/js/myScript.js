@@ -4,19 +4,12 @@ var gameIsRunning = false;
 var demoIsRunning = false;
 var droppable_items_count;
 
-function resizePage(){
-  console.log(window.innerWidth + "... H: " + window.innerHeight);
-  return;
-}
 
 $( document ).ready(function() {
-    
   // set draggable items
-  $draggable_items = $('#draggables').find('.draggable').toArray(); // object -> array
+  $draggable_items = $('#draggables').find('.draggable').toArray();
   $draggable_items.forEach(element => {
       $(element).draggable({
-          // snap: '.droppable', // magnet to droppable items
-          // snapTolerance: 15, // distance of magnet
           revert: 'invalid', // slide to start if dropped to wrong place
           disabled: true,
       })    
@@ -37,17 +30,15 @@ $( document ).ready(function() {
                   of: element,
                   using: function(pos) {
                       $(this).animate(pos, 250, "linear");
-                      // disable draggable item if dropped successfully
                       $(this).draggable( "option", "disabled", true ); 
                       $(this).css('z-index', '1')
                   }
               });
 
               --droppable_items_count;
-
               
               if(droppable_items_count == 0 ) { // end game if all were dropped
-                  window.alert("Woho! Vyhral si s casom: " + timer.getTimeValues().toString());
+                  window.alert("Woho! Vyhrali ste s časom: " + timer.getTimeValues().toString());
                   timer.stop();
                   location.reload();
               }
@@ -56,14 +47,10 @@ $( document ).ready(function() {
       
       // add accept option to each item
       element.droppable( "option", "accept", element.attr('id').replace('droppable','#draggable') );
-      // element.on('drop', function(event,ui){
-      //   alert("dropped");
-      // })
   });    
 
   $('#startLink').click(function(){ startGame(); });
   $('#demoLink').click(function(){ runDemo(); });
-
 })
 
 function startGame(){
@@ -71,10 +58,8 @@ function startGame(){
     return;
   if (gameIsRunning){
     gameIsRunning = false;
-    // $('#secondsPassed').html("00:00:00");
     pauseGame();
     timer.pause();
-    // timer.reset();
     return;
   } 
 
@@ -87,6 +72,7 @@ function startGame(){
   });
 }
 
+// disable draggables
 function pauseGame(){
   $draggable_items = $('#draggables').find('.draggable').toArray(); // object -> array
   $draggable_items.forEach(element => {
@@ -96,6 +82,7 @@ function pauseGame(){
   });
 }
 
+// enable draggables
 function resumeGame(){
   $draggable_items = $('#draggables').find('.draggable').toArray(); // object -> array
   $draggable_items.forEach(element => {
@@ -109,6 +96,9 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+/*
+ * Simulate drag and drop for each draggable - demo
+ */
 async function trigger_drop() {
   resumeGame();
   demoIsRunning= true;
@@ -137,8 +127,7 @@ async function trigger_drop() {
            dx = -210; dy = -710;
         }   else if (i == 10){
            dx = 380; dy = -850;
-        } else if (i == 12){ //dx:-144.53125 ... dy:-852.96875
-          //  dx = -160;
+        } else if (i == 12){ 
            dy = -870;
         } 
 
