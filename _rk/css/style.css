@@ -23,12 +23,10 @@ body {
     width: 500px; 
     margin: auto;
     background-color: whitesmoke;
+    border-radius: 37%;
     filter: alpha(opacity=80);
-    /* IE */
     -moz-opacity: 0.8;
-    /* Mozilla */
     opacity: 0.8;
-    /* CSS3 */
 }
 
 #map {
@@ -44,7 +42,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin: 30px 5% 20px 5%;
-    background-color: whitesmoke;
+    background: rgba(0, 0, 0, 0.712);
 }
 
 .list div {
@@ -78,87 +76,79 @@ body {
     width: 25%;
     top: 8.8421%;
     left: 7.904%; 
-    background-color: yellow;
 }
 #droppable2 {
     height: 35%;
     width: 30%;
     top: 49.10%;
     left: 9.4%; 
-    background-color: black;
 }
 #droppable3 {
     height: 7.017%;
     width: 14%;
     top: 38.07%;
     left: 21.6%;
-    background-color:green; 
 }
 #droppable4 {
     height: 10.77%;
     width: 14%;
     top: 2.45%;
     left: 35.4%; 
-    background-color: blue;
 }
 #droppable5 {
     height:22.28%;
     width: 13%;
     top: 6.115%;
     left: 41.18%; 
-    background-color: salmon;
 }
 #droppable6 {
     height: 40.28%;
     width: 17%;
     top: 36%;
     left: 44.4%; 
-    background-color: slateblue;
 }
 #droppable7 {
     height: 21.017%;
     width: 20%;
     top: 11.93%;
     left: 68.4%; 
-    background-color: sandybrown;
 }
 #droppable8 {
     height: 20.28%;
     width: 8%;
     top: 27.035%;
     left: 56.50%; 
-    background-color: yellowgreen;
 }
 #droppable9 {
     height: 10.7719%;
     width: 80%;
     top: 85.35%;
     left: 11%; 
-    background-color: brown;
 }
 #droppable10 {
     height: 21.017%;
     width: 25%;
     top: 50.684%;
     left: 71.1%; 
-    background-color: red;
 }
 #droppable11 {
     height: 12.017%;
     width: 10%;
     top: 16.184%;
     left: 58.8%; 
-    background-color: palevioletred;
 }
 #droppable12 {
     height: 16.017%;
     width: 17%;
     top: 34.34%;
     left: 70.8%; 
-    background-color: rgb(224, 61, 110);
 }
 
-
+@media (min-width: 1200px) {
+    #beforeText{
+        width: 30%;
+    }
+}
 @media (max-width: 1200px) {
     .dropDiv {
         width: 450px; 
@@ -265,7 +255,6 @@ body {
     overflow: hidden;
 }
 #beforeText{
-    width: 30%;
     background-color: white;
     min-height: 20%;
     margin-left: auto;
