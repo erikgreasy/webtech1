@@ -20,7 +20,6 @@ let uncomplete = [
     '#croatia',
 ]
 
-$('#modal').modal()
 
 // positions where user should drag countries
 const finalPositions = {
@@ -43,6 +42,8 @@ const finalPositions = {
     '#croatia' : {top: 242 + ((europeWidth-400)/100) * 60.7, left: europeWidth*0.541 + $( '#europe' ).position().left },
 }
 
+// toggle modal on page open
+$('#modal').modal()
 
 /**
  * Event listeners
