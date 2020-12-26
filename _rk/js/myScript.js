@@ -1,6 +1,7 @@
 
 var timer = new Timer();
 var gameIsRunning = false;
+var droppable_items_count;
 
 function resizePage(){
   console.log(window.innerWidth + "... H: " + window.innerHeight);
@@ -16,13 +17,15 @@ $( document ).ready(function() {
           // snap: '.droppable', // magnet to droppable items
           // snapTolerance: 15, // distance of magnet
           revert: 'invalid', // slide to start if dropped to wrong place
-          disabled: true, //------------ when page load disable all draggable items
+         // disabled: true,  TODO uncomment
       })    
   });
   
   // set droppable items
   $droppable_items = $('#droppables').find('.droppable').toArray(); 
   $droppable_count = $droppable_items.length
+  droppable_items_count = $droppable_items.length;
+
   $droppable_items.forEach(element => {
       element = $(element); // DOM element -> jQuery objects (required) 
       element.droppable({
@@ -39,22 +42,26 @@ $( document ).ready(function() {
                   }
               });
 
-              // $droppable_count -= 1;
+              --droppable_items_count;
 
-              // end game when all droppable items disabled
-              // if( ! $droppable_count ) {
-              //     timer.stop();
-              //     $('.values').addClass('result_time');
-              // }
+              
+              if(droppable_items_count == 0 ) { // end game if all were dropped
+                  window.alert("Woho! Vyhral si s casom: " + timer.getTimeValues().toString());
+                  timer.stop();
+                  location.reload();
+              }
           }
       })
       
       // add accept option to each item
       element.droppable( "option", "accept", element.attr('id').replace('droppable','#draggable') );
+      // element.on('drop', function(event,ui){
+      //   alert("dropped");
+      // })
   });    
 
   $('#startLink').click(function(){ startGame(); });
-  $('#demoLink').click(function(){ runDemo(); });
+  $('#demoLink').click(function(){ trigger_drop(); });
 
 })
 
@@ -96,6 +103,66 @@ function resumeGame(){
   });
 }
 
-function runDemo(){
+function trigger_drop() {
+  var draggable = $("#draggable1").draggable();
+  var droppable = $("#droppable1").droppable();
+  var droppableOffset = droppable.offset();
+  var draggableOffset = draggable.offset();
+  var dx = droppableOffset.left - draggableOffset.left;
+  var dy = droppableOffset.top - draggableOffset.top;
 
+  draggable.simulate("drag-n-drop", {dx: 300, interpolation: {stepWidth: 10, stepDelay: 50}});
+}
+
+function runDemo(){
+  if( gameIsRunning ) {
+    window.alert("Cannot run demo while playing.");
+    return;
+  }
+  // let positions = ['-10.1%','6.5%','190px', '0.1%','25.5%','190px'];
+  let positions = [['10%', '20%'],['10%','40%'],['30%','40%'],['30%','40%'],['30%','40%']];
+  // if (window.innerWidth > 1200){ // large screen
+  //   // left - top -width
+  //   positions = ['10.1%','6.5%','190px'];
+  // } else if (window.innerWidth > 992){ // large screen
+
+  // } else if (window.innerWidth > 768){ 
+
+  // } else if (window.innerWidth > 700){
+
+  // } else if (window.innerWidth > 556){ // small screen
+
+  // }
+
+  let droppable_count = $('#droppables').find('.droppable').toArray().length;
+  // for (let i=0; i < 3; i++){
+
+    $( "#droppable1" ).trigger('drop');
+  //   $("#draggable"+i).css({
+  //         position: 'absolute',
+  //         width: "50%",
+  //         height: "auto"
+  //     }).animate({
+  //       left: String(positions[i[0]]),
+  //       top: String(positions[i[1]]),
+  //   });
+  // }
+  
+  // $("#draggable1").css({
+  //   "position" : "absolute",
+  // }).animate({
+  //       "left": "620px",
+  //       "top": "50px",
+  //   });
+  
+  // uncomplete.forEach( item => {
+  //     let finalItemPos = finalPositions[item];
+  //     $( item ).css({
+  //         position: 'absolute'
+  //     })
+  //     $( item ).animate({
+  //         left: finalItemPos.left,
+  //         top: finalItemPos.top
+  //     }, 1000)
+  // } )
 }
