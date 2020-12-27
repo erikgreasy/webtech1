@@ -2,24 +2,42 @@
 <html lang="sk">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>Skladacka</title>
     <link rel="stylesheet" href="../assets/css/style_breadcrumb.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.1/src/easytimer.min.js"> </script>
-     
+     <link rel="stylesheet" type="text/css" href="../assets/css/navbar.css">
+     <link rel="stylesheet" href="../assets/css/style_calendar.css">
+
+
+
+
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" ></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body id="bg" onload="adjustContent()">
-
+     <navbar-element></navbar-element>
           <!-- ---BREADCRUMB--- -->
           <ul id="breadcrumb">
           </ul>
           <!-- ---------------- -->
-               
+          <br> 
 
         <div id="boxik">
              
@@ -40,7 +58,7 @@
 
                     <div id="KE" class="dropni"> </div>
 
-                    <br>
+                    <br id="space"> 
                     <div id="gettingValuesExample" >
                          <span > Tvoj čas : </span>
                          <span class="hours">0</span><span> hodiny</span>
@@ -72,18 +90,20 @@
                     />
      </div>
 
-
-          
-       
-
-     <button onclick="resetGame()" > KLIKNI NA RESET </button>
+   
      <script src="../assets/js/scripts_breadcrumb.js" >  </script>
      <script src="./js/scripts.js" >  </script>
 
+     <script src="../assets/js/navbar.js"></script>
+
      
      
-     
-     
+     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
+     <script src='../assets/js/scripts_nameDayComponent.js'></script>
+     <script src="../assets/js/main.js"></script>
         
        
     </body>

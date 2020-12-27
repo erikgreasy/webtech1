@@ -35,7 +35,7 @@ class Navbar extends HTMLElement {
                         },
                         {
                             name: 'Spoznaj Slovensko',
-                            url: '/_rb/index.html',
+                            url: '/_rb/roman_game.html',
                         },
                         {
                             name: 'Spoznaj Bratislavu',
