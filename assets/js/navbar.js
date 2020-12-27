@@ -112,7 +112,7 @@ class Navbar extends HTMLElement {
             navigation.appendChild( li );
 
             if( item.children ) {
-                li.setAttribute( 'data-toggle', 'dropdown' );
+                li.querySelector('a').setAttribute( 'data-toggle', 'dropdown' );
                 li.setAttribute( 'aria-expanded', false );
                 this.createSubmenu( item.children, li );
             }
