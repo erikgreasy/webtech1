@@ -27,19 +27,19 @@ class Navbar extends HTMLElement {
                     children: [
                         {
                             name: 'Spoznaj kontinenty',
-                            url: '/_rk/index.html'
+                            url: '/_rk/continents_game.html'
                         },
                         {
                             name: 'Spoznaj Európu',
-                            url: '/_em/index.html'
+                            url: '/_em/europe.html'
                         },
                         {
                             name: 'Spoznaj Slovensko',
-                            url: '/_rb/index.html',
+                            url: '/_rb/roman_game.html',
                         },
                         {
                             name: 'Spoznaj Bratislavu',
-                            url: '/_ml/index.html'
+                            url: '/_ml/bratislava.html'
                         },
                     ]
                 }
