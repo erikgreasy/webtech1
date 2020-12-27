@@ -1,0 +1,16 @@
+#breadcrumb {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin: 0;
+}
+
+#breadcrumb a {
+  color: rgb(112, 218, 245);
+}
+
+.current {
+  color: white;
+}
