@@ -25,6 +25,8 @@ $( document ).ready(function() {
     var breadcrumbs = new Map([
         ["", "Home"],
         ["index.html", "Home"],
+        ["kontakt.html", "Kontakt"],
+        ["checklist.html", "Checklist"],
         ["continents_info.html", "Kontinenty-info"],
         ["europe.html", "Európa-hra"],
         ["roman_game.html", "Slovensko-hra"],
