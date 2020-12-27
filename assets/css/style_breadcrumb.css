@@ -14,3 +14,19 @@
 .current {
   color: white;
 }
+
+
+/* TODO responzivita */
+@media (max-width: 768px) {
+  #breadcrumb {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 556px) {
+  #breadcrumb {
+    padding: 0 5px;
+    font-size: 12px;
+  }
+}
+

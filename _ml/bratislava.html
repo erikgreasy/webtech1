@@ -7,25 +7,25 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/style_breadcrumb.css">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/style_calendar.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
     <title>Drag&Drop game</title>
 </head>
     <body>
-        <!-- **************************************************** -->
-        <!-- * TODO - background ako na homepage, tlacislo back * -->
-        <!-- **************************************************** -->
-        <header>
-            <h1>Webtech Puzzle</h1>
-        </header>
+        <navbar-element></navbar-element>
 
         <ul id="breadcrumb">
 
         </ul>
 
+        <p class="description"> 
+            <strong>Pravidlá hry:</strong> Stlač "Start" pod časovačom a snaž čo narýchlejšie poskladať rozpadnutú Bratisku opäť dokopy. Keď poukladáš všetky časti správne časovač sa sám zastaví. Pre opakovanie pokusu stlač "Reset". Pre ukážkové poskladanie stlač <a href="#" id="demo">Demo</a>.
+        </p>
         <div class="container-lg">
             
-            <p class="description"> 
-                <strong>Pravidlá hry:</strong> Stlač "Start" pod časovačom a snaž čo narýchlejšie poskladať rozpadnutú Bratisku opäť dokopy. Keď poukladáš všetky časti správne časovač sa sám zastaví. Pre opakovanie pokusu stlač "Reset".
-            </p>
             
             <div class="wrap">
                 <img id="blindMap" src="assets/images/droppable2/blindBA.png" alt="">
@@ -68,14 +68,18 @@
 
         </div>
         
+        <footer>
+            <span> Marek Lunter &nbsp; ID: 97859</span>
+        </footer>
+
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery-ui.min.js"></script>
         <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
         <script src="assets/js/easytimer.min.js"></script>
         <script src="../assets/js/scripts_breadcrumb.js"></script>
         <script src="assets/js/script.js"></script>
-        <footer>
-            <span> Marek Lunter &nbsp; ID: 97859</span>
-        </footer>
+        <script src="/assets/js/navbar.js"></script>
+        <script src='/assets/js/scripts_nameDayComponent.js'></script>
+      
     </body>
 </html>

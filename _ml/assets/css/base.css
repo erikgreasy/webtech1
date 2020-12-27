@@ -1,6 +1,8 @@
 body {
   text-align: center;
-  background-color: #eeeeee; }
+  background-color: #eeeeee; 
+  background: url("/assets/img/37030.jpg");
+}
 
 .group:before,
 .group:after {
@@ -10,18 +12,17 @@ body {
 .group:after {
   clear: both; }
 
-header, footer {
-  background: #1d1d1d;
-  padding: 1.5em;
-  color: rgba(255, 255, 255, 0.8); }
-
-header {
-  margin-bottom: 30px; }
+footer {
+    background: rgb(29, 29, 29);
+    padding: 1.5em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 40px;
+}
 
 .description {
-  background-color: rgba(238, 130, 238, 0.5);
+  background-color: rgba(238, 130, 238, 0.65);
   width: 75%;
-  margin: 0 auto 30px;
+  margin: 20px auto 30px;
   padding: 4px 6px;
   border: 1px solid black; }
 
@@ -33,6 +34,18 @@ header {
   font-weight: 500;
   border-radius: 4px;
   text-decoration: none; }
+
+#demo:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.container-lg {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
 
 .wrap {
   position: relative;
@@ -122,7 +135,7 @@ header {
   background-image: linear-gradient(to right top, #098e33, #00a884, #00bdc3, #7bceea, #c5dffa, #d9e2ff, #ede4ff, #ffe8ff, #ffd3ea, #ffc3b0, #ffc866, #dbdb24);
   width: 40%;
   min-width: 170px;
-  margin: 30px auto 100px;
+  margin: 30px auto;
   border: 4px solid black; }
 
 #start,
@@ -154,8 +167,6 @@ header {
     width: 37.5%; }
   .description {
     font-size: 14px; }
-  #myTimer {
-    margin-bottom: 50px; }
   #myTimer h3 {
     font-size: 20px; }
   #start,
@@ -169,7 +180,7 @@ header {
   .list li {
     margin: 0 -8%; }
   #myTimer {
-    margin-top: 0; } }
+    margin-top: 10px; } }
 
 @media (max-width: 556px) {
   .wrap {
