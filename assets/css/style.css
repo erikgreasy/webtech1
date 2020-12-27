@@ -30,6 +30,12 @@ body{
     .center__text {
         font-size: 4rem;
     }
+    .check-checked{
+        width: 15%;
+    }
+    #checklist-frame{
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -41,6 +47,12 @@ body{
     }
     .center__text {
         font-size: 9rem;
+    }
+    .check-checked{
+        width: 9%;
+    }
+    #checklist-frame{
+        width: 80%;
     }
 }
 
@@ -61,7 +73,7 @@ body{
     background-color: white;
     width: 80%;
     border-radius: 8px;
-    padding: 15%;
+    padding: 5% 15% 15% 15%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 70px;
@@ -69,11 +81,11 @@ body{
 
 .preview-img{
     display: block;
-    width: 100%;
+    width: 50%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    
+    border-radius: 50%;
 }
 
 .gamepreview h3{
@@ -108,6 +120,7 @@ width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 35%;
 }
 
 .contact-name{
@@ -129,6 +142,7 @@ width: 100%;
     display: flex;
     width: 100%;
     height: 30vh;
+    justify-content: center;
 }
 .center__text {
     margin: auto;
@@ -138,7 +152,7 @@ width: 100%;
     color: whitesmoke;
 }
 .glitch {
-    position: absolute;
+    position: relative;
     color: white;
     mix-blend-mode: lighten;
     max-width: fit-content;
@@ -212,6 +226,7 @@ width: 100%;
    }
 }
 
+<<<<<<< HEAD
 #continents h1{
     text-align: center;
     padding: .5em 0;
@@ -296,5 +311,30 @@ width: 100%;
 .europe {
     background-size: cover;
     background-repeat: no-repeat;
+=======
+
+#check-bg{
+    background-image: url("../img/37030.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    position: relative;
+}
+
+#checklist-frame{
+    min-height: 500px;   
+    background-color:rgba(230, 230, 230, 0.85);
+    margin: auto;
+}
+
+.check-checked{
+    height: auto;
+    display: block;
+}
+
+#checklist-frame table td,tr{
+    text-align: center;
+>>>>>>> master
 }
 

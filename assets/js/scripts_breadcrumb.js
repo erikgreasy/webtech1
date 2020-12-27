@@ -25,7 +25,10 @@ $( document ).ready(function() {
     var breadcrumbs = new Map([
         ["", "Home"],
         ["index.html", "Home"],
-        ["bratislava.html", "Bratislava"]
+        ["europe.html", "Európa-hra"],
+        ["roman_game.html", "Slovensko-hra"],
+        ["continents.html", "Kontinenty-hra"],
+        ["bratislava.html", "Bratislava-hra"]
     ]);
 
     // print breadcrumbs to page

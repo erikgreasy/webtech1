@@ -1,91 +1,158 @@
 
-var notPlaced = 12;
-// map of id's draggable to droppable
-var mapObjects = {
-  droppable_na: "draggable_na",
-  droppable_na: "draggable_na",
-  droppable_sa: "draggable_sa",
-  droppable_cb: "draggable_cb",
-  droppable_eu: "draggable_eu",
-  droppable_af: "draggable_af",
-  droppable_me: "draggable_me",
-  droppable_ca: "draggable_ca",
-  droppable_as: "draggable_as",
-  droppable_au: "draggable_au",
-  droppable_gl: "draggable_gl",
-  droppable_ar: "draggable_ar",
-};
+var timer = new Timer();
+var gameIsRunning = false;
+var demoIsRunning = false;
+var droppable_items_count;
+
 
 $( document ).ready(function() {
+  // set draggable items
+  $draggable_items = $('#draggables').find('.draggable').toArray();
+  $draggable_items.forEach(element => {
+      $(element).draggable({
+          revert: 'invalid', // slide to start if dropped to wrong place
+          disabled: true,
+      })    
+  });
+  
+  // set droppable items
+  $droppable_items = $('#droppables').find('.droppable').toArray(); 
+  $droppable_count = $droppable_items.length
+  droppable_items_count = $droppable_items.length;
 
-  console.log( "ready!" );
+  $droppable_items.forEach(element => {
+      element = $(element); // DOM element -> jQuery objects (required) 
+      element.droppable({
+          tolerance: "intersect", // accuracy of drop
 
-  // let dragList = document.getElementsByClassName("draggable");
-  // for (const it in mapObjects){
-  //   $( ""+mapObjects[it] ).draggable({
-  //     revert: "invalid"
-  //       // start: function(ev, ui){ ui.helper.width($(this).width()); }
-  //   });
-  // }
-  $( ".draggable" ).draggable({
-      revert: "invalid"
-        // start: function(ev, ui){ ui.helper.width($(this).width()); }
-    });
+          drop: function(e, ui) {
+              ui.draggable.position({
+                  of: element,
+                  using: function(pos) {
+                      $(this).animate(pos, 250, "linear");
+                      $(this).draggable( "option", "disabled", true ); 
+                      $(this).css('z-index', '1')
+                  }
+              });
 
-  let dropList = document.getElementsByClassName("droppable");
-  for (let i=0; i < dropList.length; ++i){
-    $("#"+dropList[i].getAttribute("id")).droppable({
-      accept : "#"+mapObjects[dropList[i].getAttribute("id")], //".draggable" 
-      tolerance: 'pointer',
-      greedy : true,
-      hoverClass: 'highlight',
-        // drop: function(ev, ui) {
-        //     $(ui.draggable).detach().css({position : 'relative', top: 'auto',left: 'auto'}).appendTo(this);
-        // }
-        drop: handleCardDrop
-    });
+              --droppable_items_count;
+              
+              if(droppable_items_count == 0 ) { // end game if all were dropped
+                  window.alert("Woho! Vyhrali ste s časom: " + timer.getTimeValues().toString());
+                  timer.stop();
+                  location.reload();
+              }
+          }
+      })
+      
+      // add accept option to each item
+      element.droppable( "option", "accept", element.attr('id').replace('droppable','#draggable') );
+  });    
+
+  $('#startLink').click(function(){ startGame(); });
+  $('#demoLink').click(function(){ runDemo(); });
+})
+
+function startGame(){
+  if (demoIsRunning)
+    return;
+  if (gameIsRunning){
+    gameIsRunning = false;
+    pauseGame();
+    timer.pause();
+    return;
+  } 
+
+  gameIsRunning = true;
+  timer.start();
+  resumeGame();
+
+  timer.addEventListener('secondsUpdated', function (e) {
+    $('#secondsPassed').html(timer.getTimeValues().toString());
+  });
+}
+
+// disable draggables
+function pauseGame(){
+  $draggable_items = $('#draggables').find('.draggable').toArray(); // object -> array
+  $draggable_items.forEach(element => {
+    $(element).draggable({
+        disabled: true 
+    })
+  });
+}
+
+// enable draggables
+function resumeGame(){
+  $draggable_items = $('#draggables').find('.draggable').toArray(); // object -> array
+  $draggable_items.forEach(element => {
+    $(element).draggable({
+        disabled: false 
+    })
+  });
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/*
+ * Simulate drag and drop for each draggable - demo
+ */
+async function trigger_drop() {
+  resumeGame();
+  demoIsRunning= true;
+  
+  droppable_items_count *=2;
+
+  $draggable_items = $('#draggables').find('.draggable').toArray(); // object -> array
+    for (let i = 1; i <13;i++){
+      console.log("#draggable"+i + "..." + "#droppable" + i);
+      let draggable = $("#draggable"+i).draggable(),
+        droppable = $("#droppable"+i).droppable(),
+        droppableOffset = droppable.offset(),
+        draggableOffset = draggable.offset(),
+        dx = droppableOffset.left - draggableOffset.left,
+        dy = droppableOffset.top - draggableOffset.top;
+        console.log(i+ ".. dx:" + dx + " ... dy:" + dy);
+
+        // move the default coursor
+        if (i == 5){
+           dx -= 15; dy-=2;
+        } else if (i == 6){
+           dx -= 15; dy-=2;
+        } else if (i == 7 && window.innerWidth > 1200){
+            dx = 300;dy =-800;
+        } else if (i == 8){
+           dx = -210; dy = -710;
+        }   else if (i == 10){
+           dx = 380; dy = -850;
+        } else if (i == 12){ 
+           dy = -870;
+        } 
+
+      draggable.simulate("drag", {
+          dx: dx,
+          dy: dy
+      });
+      await sleep (1000);
+    }
+
+    await sleep (1000);
+    window.alert("Pre spustenie hry, je po deme potrebné refresnúť stránku.");
+    pauseGame();
+}
+
+function runDemo(){
+  if( gameIsRunning ) {
+    window.alert("Cannot run demo while playing.");
+    return;
   }
-  
+  trigger_drop();
+}
 
-});
-
-function handleCardDrop(event, ui) {
-  
-  //Grab the slot number and card number
-  var droppableItem = $(this).attr('id'); // $this -> droppable
-  var draggableItem = ui.draggable.attr('id'); // ui -> draggable item
-  
-  
-  //If the cards was dropped to the correct slot,
-  //change the card colour, position it directly
-  //on top of the slot and prevent it being dragged again
-
-  if (mapObjects[droppableItem] == draggableItem ) {
-    // alert( droppableItem + "..." + draggableItem );
-    ui.draggable.addClass('correct');
-    ui.draggable.draggable('disable');
-    // $(this).droppable('disable');
-    // ui.draggable.position({
-    //   of: $(this), my: 'left top', at: 'left top'
-    // });
-    //This prevents the card from being
-    //pulled back to its initial position
-    //once it has been dropped
-    ui.draggable.draggable('option', 'revert', false);
-    notPlaced--; // decrement count of not places
-  }
-  
-  //If all the cards have been placed correctly then
-  //display a message and reset the cards for
-  //another go
-
-  // if (correctCards === 10) {
-  //   $('#successMessage').show();
-  //   $('#successMessage').animate({
-  //     left: '380px',
-  //     top: '200px',
-  //     width: '400px',
-  //     height: '100px',
-  //     opacity: 1
-  //   });
-  }
+function letsPlay(){
+  $("#beforeGame").css({
+    "display": "none",
+  });
+}
