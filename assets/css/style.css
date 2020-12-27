@@ -226,7 +226,33 @@ width: 100%;
    }
 }
 
-<<<<<<< HEAD
+#check-bg{
+    background-image: url("../img/37030.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    position: relative;
+}
+
+#checklist-frame{
+    min-height: 500px;   
+    background-color:rgba(230, 230, 230, 0.85);
+    margin: auto;
+}
+
+.check-checked{
+    height: auto;
+    display: block;
+}
+
+#checklist-frame table td,tr{
+    text-align: center;
+}
+
+
+/* ----------------------- */
+/* Continents - infopage */
 #continents h1{
     text-align: center;
     padding: .5em 0;
@@ -311,30 +337,6 @@ width: 100%;
 .europe {
     background-size: cover;
     background-repeat: no-repeat;
-=======
-
-#check-bg{
-    background-image: url("../img/37030.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: auto;
-    position: relative;
 }
-
-#checklist-frame{
-    min-height: 500px;   
-    background-color:rgba(230, 230, 230, 0.85);
-    margin: auto;
-}
-
-.check-checked{
-    height: auto;
-    display: block;
-}
-
-#checklist-frame table td,tr{
-    text-align: center;
->>>>>>> master
-}
-
+/* end of continent info page */
+/* --------------------------------- */
