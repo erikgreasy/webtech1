@@ -1,3 +1,19 @@
+.navbar .dropdown-item {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar .dropdown-item a {
+  padding: 0 1.5rem;
+  display: inline-block;
+  width: 100%;
+  color: #212529;
+}
+
+.navbar .dropdown-item a:hover {
+  text-decoration: none;
+}
+
 .navbar .dropdown-submenu {
   position: relative;
 }
