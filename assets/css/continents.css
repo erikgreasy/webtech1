@@ -1,0 +1,85 @@
+#continents h1{
+    text-align: center;
+    padding: .5em 0;
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+.continent {
+    height: 80vh;
+}
+
+.continent .container {
+    padding: 7% 10%;
+}
+
+.continent h2 {
+    font-size: 3em;
+}
+
+.continent p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 8px 12px;
+    border: 6px solid rgba(255, 255, 255, 0.479);
+    border-radius: 3px;
+}
+
+.continent a {
+    color: black;
+    font-weight: 600;
+    padding: 4px 8px;
+    background-color: white;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.continent a:hover {
+    color: black;
+    background-color: rgb(247, 202, 240);
+    transition: .3s all ease-in-out;
+}
+
+.africa {
+    background: url(../img/continents/africa.jpg) bottom center;
+    color:whitesmoke;
+}
+
+.america {
+    background: url(../img/continents/america2.jpg) center center;
+}
+
+.antarctica {
+    background: url(../img/continents/antarctica.jpg);
+    color:whitesmoke;
+}
+
+.asia {
+    background: url(../img/continents/asia.jpg) bottom center;
+}
+
+.asia p{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.australia {
+    background: url(../img/continents/australia.jpg);
+}
+
+.europe {
+    background: url(../img/continents/europe.jpg) center center;
+}
+
+.africa ,
+.america,
+.antarctica,
+.asia,
+.australia,
+.europe {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
