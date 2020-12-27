@@ -18,8 +18,8 @@ class Navbar extends HTMLElement {
             url: '#',
             children: [
                 {
-                    name: 'Info',
-                    url: 'info.html',
+                    name: 'Kontinenty',
+                    url: '/continents_info.html',
                 },
                 {
                     name: 'Hry',
@@ -27,11 +27,11 @@ class Navbar extends HTMLElement {
                     children: [
                         {
                             name: 'Spoznaj kontinenty',
-                            url: '/_rk/index.html'
+                            url: '/_rk/continents_game.html'
                         },
                         {
                             name: 'Spoznaj Európu',
-                            url: '/_em/index.html'
+                            url: '/_em/europe.html'
                         },
                         {
                             name: 'Spoznaj Slovensko',
@@ -39,7 +39,7 @@ class Navbar extends HTMLElement {
                         },
                         {
                             name: 'Spoznaj Bratislavu',
-                            url: '/_ml/index.html'
+                            url: '/_ml/bratislava.html'
                         },
                     ]
                 }
