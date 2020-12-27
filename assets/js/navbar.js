@@ -18,8 +18,8 @@ class Navbar extends HTMLElement {
             url: '#',
             children: [
                 {
-                    name: 'Info',
-                    url: 'info.html',
+                    name: 'Kontinenty',
+                    url: '/continents_info.html',
                 },
                 {
                     name: 'Hry',
