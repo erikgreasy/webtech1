@@ -27,7 +27,7 @@ $( document ).ready(function() {
         ["index.html", "Home"],
         ["europe.html", "Európa-hra"],
         ["roman_game.html", "Slovensko-hra"],
-        ["continents.html", "Kontinenty-hra"],
+        ["continents_game.html", "Kontinenty-hra"],
         ["bratislava.html", "Bratislava-hra"]
     ]);
 
