@@ -8,21 +8,78 @@
      <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/navbar.css">
+    <!-- STYLESHEETS FOR DA SCREEN -->
+    <link rel="stylesheet" media="screen" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" media="screen" type="text/css" href="./assets/css/navbar.css">
+    <link rel="stylesheet" media="screen" href="./assets/css/style_breadcrumb.css">
+    <link rel="stylesheet" media="screen" href="./assets/css/style_calendar.css">
 
+    <!-- STYLESHEET FOR DA PRINTER -->
+    <link rel="stylesheet" media="print" href="/assets/css/print.css" />
+    
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" ></script>
-    <link rel="stylesheet" href="./assets/css/style_calendar.css">
 </head>
 
-<body>
+<body class="kontakt-page">
  
     <navbar-element></navbar-element>
     <cale-ndar>  </cale-ndar>
   
+
+    <header>
+      <div class="container">
+        <h1 class="text-center">Kontakt</h1>
+      </div>
+    </header>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h3>Toto sme my - Guardians of Webtech</h3>
+          <p>Nižšie nájdete kontaktné informácie na tím, ktorý sa postaral o tvorbu tejto webstránky. Za aktuálnosť údajov autori nenesú zodpovednosť, no za pokus
+            ich kontaktovať nič nedáte. Odhodlaní a plní nových vedomostí, pripravení na strasti a slasti webtechu 2, vaši Guardians of Webtech.
+          </p>
+        </div>
+        <div class="row">
+          <div class="person col-sm-12 col-md-6 col-lg-3">
+            <img src="./assets/img/romanko.png" alt="Avatar pouzivatela"><br>
+                <span class="contact-name">Roman Bútora</span> <br>
+                <span class="contact-info">
+                  email:emasny@stuba.sk<br>
+                  mobil: 0949666777
+                </span>
+          </div>
+          <div class="person col-sm-12 col-md-6 col-lg-3">
+            <img src="./assets/img/ericek.jpg" alt="Avatar pouzivatela"><br>
+                <span class="contact-name">Erik Masný</span> <br>
+                <span class="contact-info">
+                  email:rbutora@stuba.sk<br>
+                  mobil: 0939555666
+                </span>
+          </div>
+          <div class="person col-sm-12 col-md-6 col-lg-3">
+            <img src="./assets/img/marecek.jpg" alt="Avatar pouzivatela"><br>
+                <span class="contact-name"> Marek Lunter</span><br>
+                <span class="contact-info">
+                  email:mlunter@stuba.sk<br>
+                  mobil: 0959777888
+                </span>
+          </div>
+          <div class="person col-sm-12 col-md-6 col-lg-3">
+            <img src="./assets/img/rasticek.png" alt="Avatar pouzivatela"><br>
+                <span class="contact-name"> Rastislav Kopál</span><br>
+                <span class="contact-info">
+                  email:rkopal@stuba.sk<br>
+                  mobil: 0969888999
+                </span>
+          </div>
+        </div>
+      </div>  
+    </section>
 
 
   <!--***********************************************
@@ -97,7 +154,7 @@
       <!-- Grid container -->
     
       
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div class="copyright text-center p-3">
         © 2020 Copyright:
         <a class="text-muted"> www.guardiansofwebtech.sk</a>
       </div>

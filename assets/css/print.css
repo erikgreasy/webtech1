@@ -1,3 +1,31 @@
+#breadcrumb {
+    display: none;
+}
+cale-ndar {
+    display: none;
+}
+h1 {
+    text-align: center;
+}
+
+footer {
+    max-width: 100%;
+}
+.footer .copyright {
+    background-color: #fff;
+}
+footer.bg-dark {
+    background-color: transparent !important;
+    color: #000 !important;
+    border-top: 2px solid #000;
+}
+a {
+    color: #000;
+}
+
+.gamecard {
+    display: block;
+}
 html {
     font-size: 1.2rem;
     height: 100%;
@@ -9,14 +37,13 @@ body{
     width: 100%;
     min-width: 380px;
     margin: 0;
-    background-image: url("../img/bg-1.png");
     background-position: center;
     background-repeat: repeat-y;
     background-size: cover;
+    color: #000 !important;
 }
 
 .main-header{
-    background-image: url("../img/37030.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,7 +97,6 @@ body{
 }
 
 .gamecard-bg{
-    background-color: white;
     width: 80%;
     border-radius: 8px;
     padding: 5% 15% 15% 15%;
@@ -149,12 +175,9 @@ width: 100%;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    color: whitesmoke;
 }
 .glitch {
     position: relative;
-    color: white;
-    mix-blend-mode: lighten;
     max-width: fit-content;
 }
 .glitch:before, .glitch:after {
@@ -162,17 +185,9 @@ width: 100%;
     position: absolute;
     top: 0;
     width: 100%;
-    background: black;
     clip: rect(0, 0, 0, 0);
 }
-.glitch:before {
-    left: -1px;
-    text-shadow: 1px 0 rgba(255, 0, 0, 0.7);
-}
-.glitch:after {
-    left: 1px;
-    text-shadow: -1px 0 rgba(0, 0, 255, 0.7);
-}
+
 .glitch:hover:before {
     text-shadow: 4px 0 rgba(255, 0, 0, 0.7);
     animation: glitch-loop-1 0.8s infinite ease-in-out alternate-reverse;
@@ -181,53 +196,8 @@ width: 100%;
     text-shadow: -5px 0 rgba(0, 0, 255, 0.7);
     animation: glitch-loop-2 0.8s infinite ease-in-out alternate-reverse;
 }
-@keyframes glitch-loop-1 {
-    0% {
-        clip: rect(36px, 9999px, 9px, 0);
-   }
-    25% {
-        clip: rect(25px, 9999px, 99px, 0);
-   }
-    50% {
-        clip: rect(50px, 9999px, 102px, 0);
-   }
-    75% {
-        clip: rect(30px, 9999px, 92px, 0);
-   }
-    100% {
-        clip: rect(91px, 9999px, 98px, 0);
-   }
-}
-@keyframes glitch-loop-2 {
-    0% {
-        top: -1px;
-        left: 1px;
-        clip: rect(65px, 9999px, 119px, 0);
-   }
-    25% {
-        top: -6px;
-        left: 4px;
-        clip: rect(79px, 9999px, 19px, 0);
-   }
-    50% {
-        top: -3px;
-        left: 2px;
-        clip: rect(68px, 9999px, 11px, 0);
-   }
-    75% {
-        top: 0px;
-        left: -4px;
-        clip: rect(95px, 9999px, 53px, 0);
-   }
-    100% {
-        top: -1px;
-        left: -1px;
-        clip: rect(31px, 9999px, 149px, 0);
-   }
-}
-
 #check-bg{
-    background-image: url("../img/37030.jpg");
+    background: none !important;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -242,7 +212,7 @@ width: 100%;
 }
 
 .check-checked{
-    height: auto;
+    height: 20px;
     display: block;
 }
 
@@ -264,7 +234,6 @@ width: 100%;
 }
 
 .continent {
-    height: 80vh;
 }
 
 .continent .container {
@@ -278,8 +247,6 @@ width: 100%;
 .continent p {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
     padding: 8px 12px;
     border: 6px solid rgba(255, 255, 255, 0.479);
     border-radius: 3px;
@@ -296,39 +263,10 @@ width: 100%;
 
 .continent a:hover {
     color: black;
-    background-color: rgb(247, 202, 240);
     transition: .3s all ease-in-out;
 }
 
-.africa {
-    background: url(../img/continents/africa.jpg) bottom center;
-    color:whitesmoke;
-}
 
-.america {
-    background: url(../img/continents/america2.jpg) center center;
-}
-
-.antarctica {
-    background: url(../img/continents/antarctica.jpg);
-    color:whitesmoke;
-}
-
-.asia {
-    background: url(../img/continents/asia.jpg) bottom center;
-}
-
-.asia p{
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.australia {
-    background: url(../img/continents/australia.jpg);
-}
-
-.europe {
-    background: url(../img/continents/europe.jpg) center center;
-}
 
 .africa ,
 .america,
@@ -340,14 +278,10 @@ width: 100%;
     background-repeat: no-repeat;
 }
 
-footer .copyright {
-    background-color: rgba(0, 0, 0, 0.2);
-}
 
 /* KONTAKT PAGE */
 .kontakt-page section {
     height: auto;
-    background: rgb(240, 240, 240);
 }
 .kontakt-page footer {
     margin-top: 0 !important;
@@ -358,7 +292,6 @@ footer .copyright {
     font-size: 3em;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.8);
 }
 .kontakt-page .person {
     text-align: center;
