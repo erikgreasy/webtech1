@@ -10,6 +10,10 @@ class Navbar extends HTMLElement {
             url: '/',
         },
         {
+            name: 'Checklist',
+            url: '/checklist.html',
+        },
+        {
             name: 'Spoznávaj',
             url: '#',
             children: [
