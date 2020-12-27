@@ -30,6 +30,12 @@ section{
     .center__text {
         font-size: 4rem;
     }
+    .check-checked{
+        width: 15%;
+    }
+    #checklist-frame{
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -41,6 +47,12 @@ section{
     }
     .center__text {
         font-size: 9rem;
+    }
+    .check-checked{
+        width: 9%;
+    }
+    #checklist-frame{
+        width: 80%;
     }
 }
 
@@ -212,5 +224,30 @@ width: 100%;
         left: -1px;
         clip: rect(31px, 9999px, 149px, 0);
    }
+}
+
+
+#check-bg{
+    background-image: url("../img/37030.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    position: relative;
+}
+
+#checklist-frame{
+    min-height: 500px;   
+    background-color:rgba(230, 230, 230, 0.85);
+    margin: auto;
+}
+
+.check-checked{
+    height: auto;
+    display: block;
+}
+
+#checklist-frame table td,tr{
+    text-align: center;
 }
 
