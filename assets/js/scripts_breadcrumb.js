@@ -36,7 +36,6 @@ $( document ).ready(function() {
     var breadcrumbEl = $('#breadcrumb')
     for ( let i = 0; i < lastPages.length; i++ ) {
       var splittedUrl = lastPages[i].split('/');
-      console.log(splittedUrl)
       if ( i == lastPages.length - 1 ) {
         breadcrumbEl.append('<li class="current">' + breadcrumbs.get(splittedUrl[splittedUrl.length - 1].replace('#','')) + '</li>')
       } else {
