@@ -56,7 +56,7 @@ function toggleSearch(){
     }
 }
 
-var xmlFile = '../webtech1/assets/meniny.xml';
+var xmlFile = '../assets/meniny.xml';
 var xmlDoc; var skName; var skSviatok;
 
 function loadDoc() {
