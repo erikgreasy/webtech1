@@ -1,8 +1,13 @@
+html {
+  font-size: 1.2rem;
+  height: 100%;
+  width: 100%;
+}
+
 body {
   text-align: center;
   background-color: #eeeeee; 
   background: url("../images/37030.jpg");
-  /* font-family: 'Vollkorn', serif; */
 }
 
 .group:before,
@@ -13,11 +18,12 @@ body {
 .group:after {
   clear: both; }
 
-footer {
-    background: rgb(29, 29, 29);
-    padding: 1.5em;
-    color: rgba(255, 255, 255, 0.8);
-    margin-top: 40px;
+.container-lg {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .description {
@@ -38,14 +44,6 @@ footer {
 
 #demo:hover {
   background-color: rgba(255, 0, 0, 0.5);
-}
-
-.container-lg {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding-top: 30px;
-  padding-bottom: 20px;
-  border-radius: 5px;
-  overflow: hidden;
 }
 
 .wrap {
@@ -153,6 +151,15 @@ footer {
 .result_time {
   font-weight: bolder;
   color: #c01a1a; }
+
+  
+footer {
+  background: rgb(29, 29, 29);
+  padding: 1.5em;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 40px;
+}
+
 
 /* MEDIA QUERIES */
 @media (max-width: 992px) {
