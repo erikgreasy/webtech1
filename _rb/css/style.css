@@ -14,7 +14,6 @@ max-width: 100%;
 #BA{
     height: 21%;
     width: 6%;
-
     top: 51%; 
     left: 7.7%;
     border-radius: 165px / 140px;
@@ -27,88 +26,76 @@ max-width: 100%;
 #TT{
     
     height: 32%; 
-    width: 8% ; ;
-    padding: 1rem;
-    position: absolute;
+    width: 8% ; 
     top: 46%; 
     left: 11.6%;
-    transform: rotate(1deg);
-   
+    /*padding: 1rem;*/
+    transform: rotate(-1deg);
+    position: absolute;
 }
 
 
 #NT {
     height: 32%;
     width: 16%;
-    padding: 1rem;
-    position: absolute;
     top: 51%; 
     left: 22.5%;
+    /*padding: 1rem;*/
     border-radius: 65px / 200px;
-    
-    transform: rotate(-9deg);
+    transform: rotate(9deg);
+    position: absolute;
 }
 #TN  {
-height: 22%;
-width: 17%;
-
-padding: 1rem;
-position: absolute;
-top: 26%; 
-left: 16.8%;
-border-radius: 65px / 200px;
-padding-top: 35px;
-    padding-left: 15px;
-    transform: rotateX(7);
+    height: 22%;
+    width: 17%;
+    top: 26%; 
+    left: 16.8%;
+    /*padding: 1rem;*/
+    border-radius: 65px / 200px;
+    transform: rotate(1deg);
+    position: absolute;
 }
 #BB  {
 height: 25%;
 width: 27%;
-padding: 1rem;
-position: absolute;
 top: 42.2%; 
 left: 33.8%;
 border-radius: 65px / 200px;
-padding-bottom: 46px;
-    padding-left: 2px;
+position: absolute;
+
 
 }
 #ZA {
 height: 25%;
 width: 22%;
-padding: 1rem;
-position: absolute;
 top: 13.5%; 
 left: 33%;
+/*padding: 1rem;*/
 border-radius: 65px / 200px;
-padding-top: 37px;
-
-    padding-right: 25px;
-    transform: rotate(-2deg);
+    /* transform: rotate(-1deg); */
+    position: absolute;
 }
 #PP  {
 
 height: 19%;
 width: 39%;
-padding: 1rem;
-position: absolute;
 top: 19%; 
 left: 56%;
+/*padding: 1rem;*/
+/* transform: rotate(-0deg); */
 border-radius: 65px / 200px;
-padding-top: 40px;
-    padding-left: 20px;
+position: absolute;
 }
 #KE {
 
 height: 17%;
 width: 36%;
-padding: 1rem;
-position: absolute;
 top: 38.6%; 
 left: 58.5%;
+/*padding: 1rem;*/
+/* transform: rotate(-0deg); */
 border-radius: 65px / 80px;
-padding-bottom: 26px;
-padding-left: 10px;
+position: absolute;
 
 }
 
@@ -135,21 +122,6 @@ padding-left: 10px;
     
 }
 
-@media (orientation: portrait) {
-    #bg{
-
-         background-image: url("../img/37030.jpg") ;
-        background-repeat: no-repeat;
-         -webkit-background-size: auto;
-         -moz-background-size: auto;
-         -o-background-size: auto;
-         background-size: auto;
-         height: 100%;
-         overflow: auto;
-     
-         
-    }
-}
 
 
 
