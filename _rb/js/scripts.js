@@ -202,8 +202,8 @@ adjustContent();
         }
     }
 
-    var draggable_items = $('#regiony').find('.kraje').toArray(); // object -> array
-    var droppable_items = $('#dropZone').find('.dropni').toArray(); // object -> array
+    var draggables = $('#regiony').find('.kraje').toArray(); 
+    var droppables = $('#dropZone').find('.dropni').toArray(); 
 
 
     var demoAnimation = $('#demoAnimation');    
@@ -211,20 +211,20 @@ adjustContent();
     demoAnimation.on('click', function(event) {
        if ( demoOn ) {
         demoAnimation.html("Stop Demo"); 
-           for (let i = 0; i < droppable_items.length; i++) {
+           for (let i = 0; i < droppables.length; i++) {
                    setTimeout(function timer() {
-                       var drag_item = $(draggable_items[i]),
-                           drop_item = $(droppable_items[i]);
+                       var piece_drag = $(draggables[i]),
+                           piece_drop = $(droppables[i]);
 
-                           droppableOffset = drop_item.offset(),
-                           draggableOffset = drag_item.offset(),
+                           dropOffset = piece_drop.offset(),
+                           dragOffset = piece_drag.offset(),
 
-                           dx = droppableOffset.left - draggableOffset.left,
-                           dy = droppableOffset.top - draggableOffset.top;
+                           dx = dropOffset.left - dragOffset.left,
+                           dy = dropOffset.top - dragOffset.top;
 
-                       drag_item.animate({
-                           "left": dx - (drag_item.width()-drop_item.width())/2,
-                           "top": dy - (drag_item.height()-drop_item.height())/2
+                       piece_drag.animate({
+                           "left": dx - (piece_drag.width()-piece_drop.width())/2,
+                           "top": dy - (piece_drag.height()-piece_drop.height())/2
                        }, 600)
                    }, i * 500);
            }

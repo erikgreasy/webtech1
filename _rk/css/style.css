@@ -1,5 +1,5 @@
 html{
-    min-width: 440px;
+    min-width: 250px;
 }
 body {
     text-align: center;
@@ -263,6 +263,28 @@ body {
     } 
     #draggable2 {
         width: 23.25%; 
+    }
+    #draggable9{
+        width: 42.5%;
+    }
+    #beforeText{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 490px) {
+    .dropDiv {
+        width: 250px; 
+    }
+    .list {
+        margin-top: 10px; 
+    }
+    .list img {
+        width: 23.15%; 
+    } 
+    #draggable2 {
+        width: 28.25%; 
     }
     #draggable9{
         width: 41%;
