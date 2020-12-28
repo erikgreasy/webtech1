@@ -20,30 +20,39 @@ body {
 
 .container-lg {
   background-color: rgba(0, 0, 0, 0.5);
-  padding-top: 30px;
+  padding-top: 15px;
   padding-bottom: 20px;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .description {
+  text-align: left;
   background-color: rgba(238, 130, 238, 0.65);
   width: 75%;
   margin: 20px auto 30px;
-  padding: 4px 6px;
+  padding: 6px 10px;
   border: 1px solid black; }
 
+.btn-wrap {
+  margin-bottom: 20px;
+}
+
 #demo {
+  vertical-align: middle;
   display: inline-block;
-  background-color: rgba(255, 0, 0, 0.356);
-  padding: 1px 3px;
-  color: black;
+  background-color: rgb(222, 184, 135);
+  padding: 2px 14px;
   font-weight: 500;
   border-radius: 4px;
-  text-decoration: none; }
-
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+  
 #demo:hover {
-  background-color: rgba(255, 0, 0, 0.5);
+    background-color:rgb(226, 177, 113);
+    color: black;
+    text-decoration: none; 
 }
 
 .wrap {

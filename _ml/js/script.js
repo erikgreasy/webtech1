@@ -1,15 +1,8 @@
 $( document ).ready(function() {
-    
-    // shuffle draggable elements in html
-    var ul = document.querySelector('#draggable-items');
-    for (var i = ul.children.length; i >= 0; i--) {
-        ul.appendChild(ul.children[Math.random() * i | 0]);
-    }
-
 
     // set draggable items
-    $draggable_items = $('#draggable-items').find('.draggable').toArray(); // object -> array
-    $draggable_items.forEach(element => {
+    var draggable_items = $('#draggable-items').find('.draggable').toArray(); // object -> array
+    draggable_items.forEach(element => {
         $(element).draggable({
             // snap: '.droppable', // magnet to droppable items
             // snapTolerance: 15, // distance of magnet
@@ -19,9 +12,9 @@ $( document ).ready(function() {
     });
     
     // set droppable items
-    $droppable_items = $('#droppable-items').find('.droppable').toArray(); 
-    $droppable_count = $droppable_items.length
-    $droppable_items.forEach(element => {
+    var droppable_items = $('#droppable-items').find('.droppable').toArray(); 
+    var droppable_count = droppable_items.length
+    droppable_items.forEach(element => {
         element = $(element); // DOM element -> jQuery objects (required) 
         element.droppable({
             tolerance: "intersect", // accuracy of drop
@@ -37,10 +30,10 @@ $( document ).ready(function() {
                     }
                 });
 
-                $droppable_count -= 1;
+                droppable_count -= 1;
 
                 // end game when all droppable items disabled
-                if( ! $droppable_count ) {
+                if( ! droppable_count ) {
                     timer.stop();
                     $('.values').addClass('result_time');
                 }
@@ -56,9 +49,10 @@ $( document ).ready(function() {
     var timer = new easytimer.Timer();    
 
     // start button pressed - start timer and enable all draggable items
-    $('#myTimer .startButton').click(function () {
+    $('#start').click(function () {
+        $('#demo').addClass('disabled'); // disable demo
         timer.start({precision: 'secondTenths'});
-        $draggable_items.forEach(element => {
+        draggable_items.forEach(element => {
             $(element).draggable({
                 disabled: false 
             })
@@ -70,22 +64,49 @@ $( document ).ready(function() {
     timer.addEventListener('secondTenthsUpdated', function (e) {
         $('#myTimer .values').html(timer.getTimeValues().toString(['minutes', 'seconds', 'secondTenths']));
     });
-
-
+    
   
     // DEMO
-    var demo = $('#demo');    
+     var demo = $('#demo');    
+     var demoIsOn = true;
     demo.on('click', function(event) {
-        $droppable_items.forEach(element => {
-            element = $(element);
-            $dragItem = $(element.attr('id').replace('drop','#drag')) ;
-            $dragItem.animate(element.position(), 200, "linear");
-            console.log(element.position())
-        });
+       
+        // id Demo is ON do animation
+        if ( demoIsOn ) {
+            // switch demo
+            demo.html("Stop Demo"); 
+            // disable other buttons
+            $('#start').addClass('disabled');
+            $('#reset').addClass('disabled');
 
+            for (let i = 0; i < droppable_items.length; i++) {
+                    // setTimeout for delay in between iterations
+                    setTimeout(function timer() {
+                        //get drag drop item
+                        var drag_item = $(draggable_items[i]),
+                            drop_item = $(droppable_items[i]);
+
+                            droppableOffset = drop_item.offset(),
+                            draggableOffset = drag_item.offset(),
+
+                            dx = droppableOffset.left - draggableOffset.left,
+                            dy = droppableOffset.top - draggableOffset.top;
+
+                        drag_item.animate({
+                            "left": dx - (drag_item.width()-drop_item.width())/2,
+                            "top": dy - (drag_item.height()-drop_item.height())/2
+                        }, 1000)
+                    }, i * 500);
+            }
+        // id Demo is OFF reset page
+        } else {
+            window.location.reload();
+        }
+
+        // switch demoIsOn bool
+        demoIsOn = !demoIsOn;
         event.preventDefault();
     })
-
 
 })
 
