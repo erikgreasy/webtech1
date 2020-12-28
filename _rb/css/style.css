@@ -193,3 +193,8 @@ body{
     background-size: cover; */
     font-size: 1rem;
 }
+
+#demoAnimation {
+    margin-left: 50%;
+    
+}
