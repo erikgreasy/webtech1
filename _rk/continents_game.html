@@ -10,18 +10,15 @@
 </head>
 
 <body>
-
     <div id="beforeGame">
         <div id="beforeText">
-            <p>
-                <h3>Spoznaj Kontinenty</h3><br>
-                Vitajte v hre:<br>
-                Interaktívna hra - Poskladaj zemegulu z kontinentov.<br><br>
+            <h3>Spoznaj Kontinenty</h3><br>
+            Vitajte v hre:<br>
+            Interaktívna hra - Poskladaj zemegulu z kontinentov.<br><br>
+            
+            Pre začiatok hry, stlačte tlačídlo <b>Štart</b> v pravom hornom rohu. Pre spustenie dema, stlačte <b>demo</b> 
+            v strede menu. <br><br>
                 
-                Pre začiatok hry, stlačte tlačídlo <b>Štart</b> v pravom hornom rohu. Pre spustenie dema, stlačte <b>demo</b> 
-                v strede menu. 
-                
-            </p>
             <button type="button" class="btn btn-warning btn-lg mt-2 mb-4" id="understood" onclick="letsPlay()">OK, pokračovať.</button><br>
             autor: <b><span id="author">Rastislav Kopál</span></b>
         </div>
@@ -29,19 +26,18 @@
 
     <div class="container-fluid bg-dark navbar-dark pt-2 pb-2">
         <div class="row">
-            <a class="navbar-brand col-sm-12 col-md-3 col-lg-3 col-xl-3 ml-auto" href="../index.html" id="goBack"> < Späť</a>
+            <a class="navbar-brand col-sm-12 col-md-3 col-lg-3 col-xl-3 ml-auto" href="../index.html" id="goBack"> &lt; Späť</a>
         
             <a class="navbar-brand col-sm-12 col-md-3 col-lg-3 col-xl-3 ml-auto text-warning " href="#" id="demoLink">DEMO</a>
 
             <a class="navbar-brand col-sm-12 col-md-3 col-lg-3 col-xl-3 ml-auto text-danger" href="#" id="startLink">ŠTART</a>
-            </div>
         </div>
     </div>
 
-    <!-- ---BREADCRUMB--- -->
+    <!--****BREADCRUMB****-->
     <ul id="breadcrumb">
    </ul>
-   <!-- ---------------- -->
+   <!-- ******************-->
     <span id="secondsPassed" class="bg-danger px-2 py-4">00:00:00</span>
       
 
@@ -66,19 +62,22 @@
             </div>
         </div>
         
-        <div id="draggables" class="list">
-            <li><img class="draggable" id="draggable1" src="./img/1_na.png" alt="Draggable cast - sev. amerika"></li>
-            <li><img class="draggable" id="draggable2" src="./img/2_sa.png" alt="Draggable cast -  juz. amerika"></li>
-            <li><img class="draggable" id="draggable3" src="./img/3_cb.png" alt="Draggable cast - karibik "></li>
-            <li><img class="draggable" id="draggable4" src="./img/4_greenland.png" alt="Draggable cast - gronsko"></li>
-            <li><img class="draggable" id="draggable5" src="./img/5_eu.png" alt="Draggable cast - europa"></li>
-            <li><img class="draggable" id="draggable6" src="./img/6_af.png" alt="Draggable cast - afrika"></li>
-            <li><img class="draggable" id="draggable7" src="./img/7_asia.png" alt="Draggable cast - azia"></li>
-            <li><img class="draggable" id="draggable8" src="./img/8_me.png" alt="Draggable cast - blizky vychod"></li>
-            <li><img class="draggable" id="draggable9" src="./img/9_ar.png" alt="Draggable cast - arktida"></li>
-            <li><img class="draggable" id="draggable10" src="./img/10_au.png" alt="Draggable cast - australia"></li>
-            <li><img class="draggable" id="draggable11" src="./img/11_ca.png" alt="Draggable cast - centralna azia"></li>
-            <li><img class="draggable" id="draggable12" src="./img/12_sea.png" alt="Draggable cast - Juhovychodna azia"></li>
+        
+        <div >
+            <ul id="draggables" class="list">
+                <li><img class="draggable" id="draggable1" src="./img/1_na.png" alt="Draggable cast - sev. amerika"></li>
+                <li><img class="draggable" id="draggable2" src="./img/2_sa.png" alt="Draggable cast -  juz. amerika"></li>
+                <li><img class="draggable" id="draggable3" src="./img/3_cb.png" alt="Draggable cast - karibik "></li>
+                <li><img class="draggable" id="draggable4" src="./img/4_greenland.png" alt="Draggable cast - gronsko"></li>
+                <li><img class="draggable" id="draggable5" src="./img/5_eu.png" alt="Draggable cast - europa"></li>
+                <li><img class="draggable" id="draggable6" src="./img/6_af.png" alt="Draggable cast - afrika"></li>
+                <li><img class="draggable" id="draggable7" src="./img/7_asia.png" alt="Draggable cast - azia"></li>
+                <li><img class="draggable" id="draggable8" src="./img/8_me.png" alt="Draggable cast - blizky vychod"></li>
+                <li><img class="draggable" id="draggable9" src="./img/9_ar.png" alt="Draggable cast - arktida"></li>
+                <li><img class="draggable" id="draggable10" src="./img/10_au.png" alt="Draggable cast - australia"></li>
+                <li><img class="draggable" id="draggable11" src="./img/11_ca.png" alt="Draggable cast - centralna azia"></li>
+                <li><img class="draggable" id="draggable12" src="./img/12_sea.png" alt="Draggable cast - Juhovychodna azia"></li>
+           </ul>
         </div>
 
     </div>
