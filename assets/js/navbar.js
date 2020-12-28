@@ -7,11 +7,11 @@ class Navbar extends HTMLElement {
     navItems = [
         {
             name: 'Domov',
-            url: '/',
+            url: './',
         },
         {
             name: 'Checklist',
-            url: '/checklist.html',
+            url: './checklist.html',
         },
         {
             name: 'Spoznávaj',
@@ -19,7 +19,7 @@ class Navbar extends HTMLElement {
             children: [
                 {
                     name: 'Kontinenty',
-                    url: '/continents_info.html',
+                    url: './continents_info.html',
                 },
                 {
                     name: 'Hry',
@@ -27,19 +27,19 @@ class Navbar extends HTMLElement {
                     children: [
                         {
                             name: 'Spoznaj kontinenty',
-                            url: '/_rk/continents_game.html'
+                            url: './_rk/continents_game.html'
                         },
                         {
                             name: 'Spoznaj Európu',
-                            url: '/_em/europe.html'
+                            url: './_em/europe.html'
                         },
                         {
                             name: 'Spoznaj Slovensko',
-                            url: '/_rb/roman_game.html',
+                            url: './_rb/roman_game.html',
                         },
                         {
                             name: 'Spoznaj Bratislavu',
-                            url: '/_ml/bratislava.html'
+                            url: './_ml/bratislava.html'
                         },
                     ]
                 }
@@ -47,7 +47,7 @@ class Navbar extends HTMLElement {
         },
         {
             name: 'Kontakt',
-            url: '/kontakt.html'
+            url: './kontakt.html'
         }
     ];
 
@@ -62,7 +62,7 @@ class Navbar extends HTMLElement {
         const brand = document.createElement( 'a' );
         brand.className += 'navbar-brand';
         brand.textContent = "Spoznaj";
-        brand.setAttribute( 'href', '/' );
+        brand.setAttribute( 'href', './' );
 
         // create navbar toggler
         const toggler = document.createElement( 'button' );

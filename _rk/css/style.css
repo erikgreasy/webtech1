@@ -1,10 +1,11 @@
-body {
-  text-align: center;
-  margin: 0;
-  width: 100%;
+html{
+    min-width: 440px;
 }
-
 body {
+    text-align: center;
+    margin: 0;
+    min-width: 440px;
+    width: 100%;
     background: url(../img/37030.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -13,13 +14,16 @@ body {
 }
 
 #secondsPassed{
-    position: absolute;
+    text-align: left;
+    position: fixed;
     right: 5px;
+    z-index: 15;
 }
 
 .dropDiv {
     position: relative;
     /* float: left; */
+    min-width: 250px;
     width: 500px; 
     margin: auto;
     background-color: whitesmoke;
@@ -225,6 +229,28 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+    .dropDiv {
+        float: none;
+        margin: 0 auto; 
+    }
+    .list li {
+        margin: 0 -8%; 
+    }
+    .list img {
+        width: 22.5%; 
+    }
+    #draggable2 {
+        width: 24.5%; 
+    }
+    #draggable9{
+        width: 40%;
+    }
+    #beforeText{
+        width: 100%;
+    }
+}
+
 @media (max-width: 556px) {
     .dropDiv {
         width: 250px; 
@@ -236,7 +262,7 @@ body {
         width: 20.25%; 
     } 
     #draggable2 {
-        width: 25.25%; 
+        width: 23.25%; 
     }
     #draggable9{
         width: 41%;
@@ -261,4 +287,8 @@ body {
     margin-right: auto;
     margin-top: 10%;
     padding: 2% 5% 2% 5%;
+}
+
+#goBack{
+    z-index: 100;
 }

@@ -101,7 +101,15 @@ function sleep(ms) {
  */
 async function trigger_drop() {
   resumeGame();
+  if (demoIsRunning){
+    demoIsRunning = false;
+    $("#demoLink").text("DEMO");
+    location.reload();
+    return;
+  }
+  
   demoIsRunning= true;
+  $("#demoLink").text("RESET");
   
   droppable_items_count *=2;
 
@@ -115,31 +123,16 @@ async function trigger_drop() {
         dx = droppableOffset.left - draggableOffset.left,
         dy = droppableOffset.top - draggableOffset.top;
         console.log(i+ ".. dx:" + dx + " ... dy:" + dy);
-
-        // move the default coursor
-        if (i == 5){
-           dx -= 15; dy-=2;
-        } else if (i == 6){
-           dx -= 15; dy-=2;
-        } else if (i == 7 && window.innerWidth > 1200){
-            dx = 300;dy =-800;
-        } else if (i == 8){
-           dx = -210; dy = -710;
-        }   else if (i == 10){
-           dx = 380; dy = -850;
-        } else if (i == 12){ 
-           dy = -870;
-        } 
-
-      draggable.simulate("drag", {
-          dx: dx,
-          dy: dy
+        
+      draggable.animate({
+          "left": dx - (draggable.width()-droppable.width())/2,
+          "top": dy - (draggable.height()-droppable.height())/2
       });
-      await sleep (1000);
+      await sleep (200);
     }
 
     await sleep (1000);
-    window.alert("Pre spustenie hry, je po deme potrebné refresnúť stránku.");
+    window.alert("Pre spustenie hry, je po deme potrebné stlačiť tlačídlo - reset.");
     pauseGame();
 }
 

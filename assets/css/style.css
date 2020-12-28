@@ -340,6 +340,29 @@ width: 100%;
     background-repeat: no-repeat;
 }
 
+@media (max-width: 768px) {
+    .continent {
+      font-size: .9em;
+      height: 70vh;
+    }
+
+    .continent .container {
+        padding: 7% 0%;
+    }
+}
+
+@media (max-width: 580px) {
+    .continent {
+      font-size: .7em;
+      height: 60vh;
+    }
+
+    .continent .container {
+        padding: 7% 2%;
+    }
+
+}
+
 footer .copyright {
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -368,4 +391,12 @@ footer .copyright {
     width: 100%;
     border-radius: 35%;
     padding-bottom: 20px;
+}
+
+#contendUsed{
+    width: 80%;
+    margin-left: 10%;
+}
+#contendUsed p{
+    font-size: small;
 }
