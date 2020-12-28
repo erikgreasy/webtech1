@@ -24,6 +24,8 @@
    setRegions();
   }
   
+adjustContent();
+
   window.addEventListener('resize', adjustContent);
 
   function setRegions(){
