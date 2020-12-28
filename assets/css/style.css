@@ -392,3 +392,11 @@ footer .copyright {
     border-radius: 35%;
     padding-bottom: 20px;
 }
+
+#contendUsed{
+    width: 80%;
+    margin-left: 10%;
+}
+#contendUsed p{
+    font-size: small;
+}
