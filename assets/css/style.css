@@ -23,6 +23,7 @@ body{
     width: auto;
     position: relative;
 }
+
 @media screen and (max-width: 1200px) {
     section {
         height: 50%;
@@ -31,10 +32,11 @@ body{
         font-size: 4rem;
     }
     .check-checked{
-        width: 15%;
+        width: 25%;
     }
     #checklist-frame{
         width: 100%;
+        font-size: small;
     }
 }
 
@@ -227,6 +229,7 @@ width: 100%;
 }
 
 #check-bg{
+    min-width: 450px;
     background-image: url("../img/37030.jpg");
     background-position: center center;
     background-repeat: no-repeat;

@@ -98,6 +98,7 @@ function sleep(ms) {
 
 /*
  * Simulate drag and drop for each draggable - demo
+ * idea - https://codepen.io/xlicodes/pen/ZMLmxZ
  */
 async function trigger_drop() {
   resumeGame();
