@@ -9,7 +9,7 @@ function countAccesses(){
         var numOfAccesses = cookie[0];
         var lastTime = new Date (cookie[1]);
         var diffMinutes = Math.ceil ((dateNow - lastTime) / (1000*60)) ;
-        if ( diffMinutes >= 30 ) {
+        if ( diffMinutes >= 15 ) {
             var increment = ++numOfAccesses;
             var arr = [increment,dateNow];
             var json_str = JSON.stringify(arr);
