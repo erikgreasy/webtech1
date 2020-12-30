@@ -56,7 +56,7 @@ function toggleSearch(){
     }
 }
 
-var xmlFile = String(window.location.href).replace('/#',"") + '/assets/meniny.xml';
+var xmlFile = 'http://147.175.121.202/~xbutorar/skuuuska_68249/assets/meniny.xml';
 var xmlDoc; var skName; var skSviatok;
 
 function loadDoc() {
